@@ -1,0 +1,163 @@
+/* ViewCustomer.css */
+.vm-container {
+  padding: 24px;
+  background: #fff;
+  font-family: "Inter", sans-serif;
+  color: #222;
+}
+
+.vm-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.vm-filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.vm-select,
+.vm-input {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  font-size: 14px;
+}
+
+.vm-search-group {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vm-search {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 220px;
+  font-size: 14px;
+}
+
+.vm-add-button {
+  background: #f97316;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.vm-add-button:hover {
+  background: #ea580c;
+}
+
+.vm-card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.vm-card {
+  display: flex;
+  align-items: flex-start;
+  background: #fafafa;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 14px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.vm-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+.vm-avatar-section {
+  flex-shrink: 0;
+}
+
+.vm-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+}
+
+.vm-info {
+  flex: 1;
+}
+
+.vm-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vm-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.vm-edit {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #555;
+}
+
+.vm-edit:hover {
+  color: #f97316;
+}
+
+.vm-field {
+  margin: 2px 0;
+  font-size: 14px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  word-break: break-word;
+}
+
+.vm-icon {
+  color: #666;
+  flex-shrink: 0;
+}
+
+.vm-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 6px;
+}
+
+.vm-page-btn {
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.vm-page-btn:hover {
+  background: #f3f4f6;
+}
+
+.vm-page-btn.active {
+  background: #f97316;
+  color: #fff;
+  border-color: #f97316;
+}
+

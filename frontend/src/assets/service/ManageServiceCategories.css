@@ -1,0 +1,264 @@
+/* Overlay */
+.msc-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+}
+
+/* Modal box */
+.msc-modal {
+  background: #fff;
+  width: 700px;
+  max-height: 90vh;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  overflow: hidden;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header */
+.msc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e4e4e4;
+  padding-bottom: 10px;
+  margin-bottom: 16px;
+}
+
+.msc-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
+}
+
+.msc-close-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.2s ease;
+}
+
+.msc-close-btn:hover {
+  color: #000;
+}
+
+/* Category list */
+.msc-list {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 4px;
+  max-height: 400px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.msc-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: #fafafa;
+  border: 1px solid #e4e4e4;
+  border-radius: 10px;
+  padding: 14px;
+  transition: all 0.2s ease;
+}
+
+.msc-card:hover {
+  background: #fff;
+  border-color: #d1d1d1;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.msc-card-info {
+  flex: 1;
+  padding-right: 10px;
+}
+
+.msc-card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.msc-card-desc {
+  font-size: 14px;
+  color: #666;
+}
+
+.msc-delete-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #d9534f;
+  padding: 2px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.msc-delete-btn:hover {
+  color: #b52b27;
+  transform: scale(1.1);
+}
+
+/* Add form */
+.msc-add-form {
+  border-top: 1px solid #e4e4e4;
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.msc-add-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: #222;
+}
+
+.msc-input,
+.msc-textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.msc-input:focus,
+.msc-textarea:focus {
+  border-color: #007bff;
+}
+
+.msc-textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.msc-add-btn {
+  align-self: flex-start;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.msc-add-btn:hover {
+  background: #0056b3;
+}
+
+/* Scrollbar */
+.msc-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.msc-list::-webkit-scrollbar-thumb {
+  background-color: #cfcfcf;
+  border-radius: 3px;
+}
+
+/* Confirmation Modal */
+.msc-confirm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Higher than main modal */
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+
+.msc-confirm-modal {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 380px;
+  text-align: center;
+  animation: fadeIn 0.2s ease;
+}
+
+.msc-confirm-message {
+  font-size: 17px;
+  color: #333;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.msc-confirm-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.msc-confirm-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 9px 18px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.msc-confirm-btn-cancel {
+  background: #6c757d;
+  color: white;
+}
+
+.msc-confirm-btn-cancel:hover {
+  background: #5a6268;
+}
+
+.msc-confirm-btn-primary {
+  background: #007bff;
+  color: white;
+}
+
+.msc-confirm-btn-primary:hover {
+  background: #0056b3;
+}
+
+.msc-confirm-btn-danger {
+  background: #d9534f;
+  color: white;
+}
+
+.msc-confirm-btn-danger:hover {
+  background: #b52b27;
+}

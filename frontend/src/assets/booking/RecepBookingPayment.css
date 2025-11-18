@@ -1,0 +1,151 @@
+.quynh-payment-container {
+    background: #fff;
+    border-radius: 12px;
+    width: 95%;
+    margin: 1% auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-family: "Segoe UI", sans-serif;
+    padding: 20px;
+}
+
+.quynh-payment-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+    text-decoration: underline;
+}
+
+.quynh-payment-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.quynh-payment-left {
+    flex: 1;
+    line-height: 1.8;
+    background-color: #f3f3f3;
+    padding: 10px;
+    border-radius: 10px;
+    max-height: 370px;
+}
+
+.quynh-payment-left p {
+    margin: 6px 0;
+}
+
+.quynh-payment-total span {
+    font-weight: 700;
+    color: #000;
+    font-size: 18px;
+}
+
+.quynh-payment-right {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0px 5px;
+}
+
+.quynh-payment-method p {
+    margin-bottom: 6px;
+}
+
+.quynh-payment-method label {
+    margin-right: 15px;
+    font-weight: 500;
+}
+
+.quynh-payment-input {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.quynh-payment-input label {
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.quynh-payment-input input {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.quynh-payment-input input:focus {
+    border-color: #888;
+}
+
+.quynh-payment-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.quynh-btn-back,
+.quynh-btn-finish {
+    border: none;
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.quynh-btn-back {
+    background: #eee;
+    color: #333;
+}
+
+.quynh-btn-back:hover {
+    background: #ddd;
+}
+
+.quynh-btn-finish {
+    background: #f59e0b;
+    color: white;
+}
+
+.quynh-btn-finish:hover {
+    background: #e08b00;
+}
+
+.quynh-payment-qr {
+  text-align: center;
+  margin-top: 20px;
+  border: 1px dashed #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #f9f9f9;
+}
+
+.quynh-payment-qr p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.quynh-payment-qr strong {
+  color: #d9534f;
+}
+
+.quynh-payment-qr img {
+  max-width: 250px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+}
+
+.quynh-payment-qr p.qr-note {
+  font-size: 13px;
+  color: #555;
+  margin-top: 15px;
+}

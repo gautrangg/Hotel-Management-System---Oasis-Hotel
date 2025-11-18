@@ -1,0 +1,114 @@
+.add-form {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  max-width: 1600px; /* container to hơn */
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 40px; /* tăng padding cho rộng hơn */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  align-items: stretch; /* 2 cột cao bằng nhau */
+}
+
+.add-form-left {
+  flex: 1; /* chiếm 1/2 */
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.add-form-right {
+  flex: 1; /* chiếm 1/2 */
+  max-width: 800px; /* giới hạn tối đa preview image */
+  display: flex;
+  justify-content: center; /* căn giữa ngang */
+  align-items: center;     /* căn giữa dọc */
+}
+
+.add-form-field {
+  margin-bottom: 18px;
+}
+
+.add-form-field p {
+  margin: 0 0 6px 0;
+  font-weight: 500;
+  color: #333;
+}
+
+.add-form input[type="text"],
+.add-form input[type="number"],
+.add-form input[type="date"],
+.add-form input[type="file"],
+.add-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  transition: 0.2s;
+  box-sizing: border-box;
+}
+
+.add-form input:focus,
+.add-form textarea:focus {
+  border-color: #f97316;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(249,115,22,0.2);
+}
+
+.add-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.add-form .error-text {
+  color: red;
+  font-size: 12px;
+  margin-top: 2px;
+  display: block;
+}
+
+.add-form .preview-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.add-form input[type="submit"].orange-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f97316;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.add-form input[type="submit"].orange-btn:hover {
+  background-color: #d8600f;
+}
+
+.add-form-error-text {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 4px;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .add-form {
+    flex-direction: column;
+  }
+  .add-form-right {
+    width: 100%;
+    margin-top: 20px;
+  }
+}

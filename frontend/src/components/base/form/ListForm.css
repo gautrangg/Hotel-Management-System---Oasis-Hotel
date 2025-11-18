@@ -1,0 +1,94 @@
+.list-form-container {
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: sans-serif;
+}
+
+/* Title */
+.list-form-container h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Controls */
+.list-form-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.list-form-controls select,
+.list-form-controls input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.list-form-controls input {
+  flex: 1;
+}
+
+/* Table */
+.list-form-table {
+  width: 100%;
+  border-collapse: separate;
+  margin-bottom: 10px;
+  border-spacing: 0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.list-form-table th {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  border-right: 1px solid #fff;
+  border-radius: 0px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s;
+}
+
+.list-form-table th:hover {
+  background-color: #e9ecef;
+}
+
+.list-form-table td {
+  
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.list-form-table th {
+  background-color: #d97706;
+  color: #fff;
+}
+
+.list-form-table tr:hover {
+  background-color: #fafafa;
+}
+
+.list-form-table tbody tr:nth-child(odd) {
+  background-color: #ffffff; /* trắng */
+}
+
+.list-form-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* xám nhạt */
+}
+
+.list-form-pagination {
+  display: flex;
+  gap: 4px; /* khoảng cách nhỏ hơn giữa các nút */
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.list-form-pagination button {
+  padding: 4px 10px;
+  border: none;
+  border-radius: 4px;
+}

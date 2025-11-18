@@ -1,0 +1,388 @@
+.t-bookroom-header {
+  display: flex;
+  width: 100%;
+}
+.t-bookroom-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding: 0 16px;
+  z-index: 1000;
+}
+
+.t-bookroom-header-back-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 18px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  color: #d6680a;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.15s;
+}
+
+.t-bookroom-header-timer {
+  font-size: 20px;
+  width: 50%;
+  display: flex;
+  justify-content: end;
+}
+
+.t-bookroom-header-timer span {
+  margin-left: 1%;
+  font-size: 20px;
+  font-weight: 700;
+  color: #d6680a;
+}
+
+.t-bookroom-header-back-icon:hover {
+  background: #ffd9b8;
+}
+
+.t-bookroom-header-back-icon i {
+  font-size: 18px;
+}
+
+.t-bookroom__container {
+  max-width: 1400px;
+  margin: 6% auto;
+  padding: 0 1rem;
+}
+
+.t-bookroom__content {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+/* --- Columns --- */
+.t-bookroom__summary-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.t-bookroom__form-column {
+  flex: 1.2; /* Make the form column slightly wider */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* --- Generic Card Style --- */
+.t-bookroom__card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+}
+
+.t-bookroom-card__header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.t-bookroom-card__header-title {
+  margin: 0;
+  font-size: 1.125rem;
+  text-align: center;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.t-bookroom-card__body {
+  padding: 1.5rem;
+}
+
+/* --- Left Column: Summary & Details --- */
+
+/* Top Card: Room Image & Details */
+.t-bookroom-card--details .card__image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+.t-bookroom-card--details .card__body {
+  padding-bottom: 1.25rem;
+}
+
+.t-bookroom-card--details .card__title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.75rem; /* 28px */
+}
+
+.t-bookroom-card--details .card__description {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+.t-bookroom-card--details .card__footer {
+  padding: 1rem 1.5rem;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.booked-info__label {
+  color: #475569;
+  margin-right: 0.5rem;
+}
+
+.booked-info__number {
+  background-color: #dd6b20; /* Orange-brown from image */
+  color: #fff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.price-info__amount {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #1e293b;
+}
+
+/* Middle Card: Booking Date & Guests */
+.t-bookroom-card__body .t-bookroom-info-field {
+  margin-bottom: 1rem;
+}
+.t-bookroom-card__body .t-bookroom-info-field:last-child {
+  margin-bottom: 0;
+}
+
+.t-bookroom-info-field__label {
+  display: block;
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-bottom: 0.25rem;
+}
+
+.t-bookroom-info-field__value {
+  padding: 0.75rem 1rem;
+  background-color: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #334155;
+}
+
+/* Bottom Card: Total Deposit */
+.t-bookroom-total__amount {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #1e293b;
+}
+
+/* --- Right Column: Form & Payment --- */
+
+/* Customer Info Form */
+.t-bookroom-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.t-bookroom-form__row {
+  display: flex;
+  gap: 1rem;
+}
+
+.t-bookroom-form__group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.t-bookroom-form__group--full-width {
+  flex-basis: 100%;
+}
+
+.t-bookroom-form__label {
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #475569;
+}
+
+.t-bookroom-form__input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.t-bookroom-form__input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* --- Stripe Payment Section --- */
+/* You might need to wrap your <StripePayment> component in a div 
+   with this class to get the border from the image. */
+.t-bookroom__payment-wrapper {
+  border: 1px solid #e2e8f0;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background: #fff;
+}
+
+
+/* --- Action Buttons --- */
+.t-bookroom__actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  flex: 1; /* Make buttons take up equal space */
+  padding: 0.85rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: opacity 0.2s ease;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn--secondary {
+  background-color: #cccccc;
+  color: #444444;
+}
+
+.btn--primary {
+  background-color: #dd6b20; /* Orange-brown from image */
+  color: #fff;
+}
+
+.t-bookroom__card.t-bookroom-card--details {
+  border-radius: 16px; /* Bo góc mềm mại hơn */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07); /* Đổ bóng nhẹ nhàng */
+  border: 1px solid #f0f0f0;
+}
+
+/* Ảnh phòng */
+.t-bookroom-card--details .card__image {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  /* Bo góc ảnh phía trên cho khớp với card */
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+/* Nội dung card */
+.t-bookroom-card--details .card__body {
+  padding: 1.5rem; /* 24px */
+}
+
+.t-bookroom-card--details .card__title {
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0 0 1rem 0;
+  color: #111827;
+}
+
+.t-bookroom-card--details .card__description {
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.6;
+  margin: 0 0 2rem 0;
+}
+
+.t-bookroom-card--details .card__footer {
+  background-color: transparent;
+  border-top: none;
+  padding: 0;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__footer .booked-info__label {
+  font-size: 1rem;
+  color: #374151;
+  margin-right: 0.75rem;
+}
+
+.card__footer .booked-info__number {
+  background-color: #f97316;
+  color: white;
+  padding: 0.5rem 1rem; 
+  border-radius: 8px;
+  font-size: 1.125rem; 
+  font-weight: 700;
+}
+
+.card__footer .price-info__amount {
+  font-size: 1.75rem; 
+  font-weight: 500;
+  color: #111827;
+}
+
+.t-bookroom__card .t-bookroom-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.t-bookroom-calculation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem; 
+  color: #4b5563;
+}
+
+.t-bookroom-divider {
+  border: none;
+  height: 1px;
+  background-color: #e5e7eb;
+  margin: 0.5rem 0;
+}
+
+.t-bookroom-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total__label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.total__amount {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+}

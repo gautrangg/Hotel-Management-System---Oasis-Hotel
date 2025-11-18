@@ -1,0 +1,271 @@
+.pa-container {
+    color: #111827;
+    padding-bottom: 60px;
+    font-size: 14px;
+}
+
+.pa-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.pa-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.pa-add-button {
+    background-color: #F97316;
+    /* Orange color */
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.pa-add-button:hover {
+    background-color: #EA580C;
+    /* Darker Orange */
+}
+
+.pa-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.pa-table th,
+.pa-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.pa-table th {
+    background-color: #ff9500;
+    color: #fff;
+    font-weight: 600;
+}
+
+.pa-error {
+    color: #DC2626;
+    background-color: #FEE2E2;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+}
+
+/* Modal Styles */
+.pa-modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.pa-modal-content {
+    background-color: white;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 500px;
+}
+
+.pa-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.pa-modal-title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.pa-modal-close {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #6B7280;
+}
+
+.pa-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.pa-form-input,
+.pa-form-select {
+    padding: 10px;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+.pa-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.pa-form-button {
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.pa-button-secondary {
+    background-color: #E5E7EB;
+    color: #374151;
+}
+
+.pa-button-secondary:hover {
+    background-color: #D1D5DB;
+}
+
+/* --- CSS for Actions Menu --- */
+
+.pa-actions-cell {
+    position: relative;
+    text-align: center;
+}
+
+.pa-actions-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pa-actions-button i {
+    font-size: 500;
+}
+
+.pa-actions-button:hover {
+    background-color: #f0f0f0;
+}
+
+.pa-actions-menu {
+    position: absolute;
+    top: 30px;
+    right: 15px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 300;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pa-actions-menu button {
+    background: none;
+    border: none;
+    padding: 10px;
+    text-align: left;
+    cursor: pointer;
+    width: 100%;
+}
+
+.pa-actions-menu button:hover {
+    background-color: #f5f5f5;
+}
+
+.pa-actions-menu .pa-delete-action:hover {
+    background-color: #ffebee;
+    color: #d32f2f;
+}
+
+.pa-table tbody tr:last-child .pa-actions-menu {
+    top: auto;
+    bottom: 50%;
+    margin-bottom: 5px;
+}
+/* --- CSS CHO THANH CONTROLS (SEARCH, SORT) --- */
+
+.pa-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.pa-search-input {
+    padding: 0.6rem 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    width: 300px; 
+}
+
+.pa-search-input:focus {
+    outline: none;
+    border-color: #e67e22; 
+    box-shadow: 0 0 0 2px rgba(230, 126, 34, 0.2);
+}
+
+.pa-sort-controls {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.pa-controls .pa-form-select {
+    padding: 0.6rem 0.75rem;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+.pa-sort-button {
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    font-weight: 700;
+    min-width: 50px;
+    text-align: center;
+}
+
+.pa-sort-button:hover {
+    background-color: #f5f5f5;
+}
+
+.pa-no-data {
+    text-align: center;
+    color: #777;
+    padding: 1.5rem;
+    font-style: italic;
+}

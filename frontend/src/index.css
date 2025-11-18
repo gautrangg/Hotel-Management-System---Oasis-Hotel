@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+}
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+
+.q-login-container {
+  display: flex;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: url("/hotel-bg.jpg") no-repeat center center/cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken; /* làm ảnh tối đi */
+  padding: 40px 80px;
+  box-sizing: border-box;
+}
+
+/* Bên trái */
+.q-login-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  padding-right: 40px;
+}
+
+.q-login-left h1 {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.q-login-left p {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 480px;
+}
+
+/* Bên phải */
+.q-login-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.q-login-box {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.q-login-box h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.q-sub-text {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Form */
+.q-login-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.q-login-box input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  color: black;
+  background-color: #fff;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.q-login-box input:focus {
+  outline: none;
+  border-color: #e63946;
+  box-shadow: 0 0 5px rgba(230, 57, 70, 0.5);
+}
+
+.q-remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-top: -5px;
+}
+
+.q-remember-forgot a {
+  color: #e63946;
+  text-decoration: none;
+}
+
+.q-remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.q-remember-forgot label {
+  display: flex;
+  align-items: center; 
+  gap: 6px; 
+  white-space: nowrap; 
+  cursor: pointer;
+}
+
+.q-remember-forgot input.q-remember {
+  margin: 0; 
+}
+
+
+.q-remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+.q-btn-login {
+  width: 100%;
+  background: #e63946;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.q-btn-login:hover {
+  background: #c82333;
+}
+
+/* Or text */
+.q-or-text {
+  margin: 20px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Social login */
+.q-social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.q-social-buttons button {
+  flex: 1;
+  min-width: 80px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.q-social-buttons button:hover {
+  opacity: 0.85;
+}
+
+.q-social-buttons .q-twitter {
+  background: #1da1f2;
+}
+.q-social-buttons .q-facebook {
+  background: #076abb;
+}
+.q-social-buttons .q-google {
+  background: #ba2828;
+}
+.q-social-buttons .q-linkedin {
+  background: #0077b5;
+}
+
+/* Register text */
+.q-register-text {
+  margin-top: 20px;
+  color: #555;
+  font-size: 14px;
+}
+
+.q-register-text a {
+  color: #e63946;
+  text-decoration: none;
+}
+
+.q-register-text a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive: mobile chỉ hiện form */
+@media (max-width: 768px) {
+  .q-login-left {
+    display: none;
+  }
+  .q-login-container {
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  .q-login-right {
+    flex: 1;
+    width: 100%;
+  }
+  .q-login-box {
+    padding: 30px;
+  }
+}

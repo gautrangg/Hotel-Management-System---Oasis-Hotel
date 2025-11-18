@@ -1,0 +1,304 @@
+.hvu-add-service-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  overflow: hidden;
+  /* Cho background mờ đi */
+  -webkit-backdrop-filter: blur(2px); /* Safari/iOS support */
+  backdrop-filter: blur(2px);
+}
+
+.hvu-add-service-modal {
+  background: white;
+  border-radius: 12px;
+  width: 750px;
+  max-width: 90%;
+  padding: 24px 30px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  animation: scaleIn 0.25s ease-out;
+}
+
+.hvu-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f3f4f6;
+  padding-bottom: 10px;
+  margin-bottom: 18px;
+}
+
+.hvu-modal-header h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.hvu-close-btn {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: #6b7280;
+  cursor: pointer;
+}
+.hvu-close-btn:hover {
+  color: #d97706;
+}
+
+/* Form layout */
+.hvu-form-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Form groups */
+.hvu-form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.hvu-form-group label {
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+input,
+select,
+textarea {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 0.95rem;
+}
+
+/* Price input with unit */
+.hvu-input-price {
+  display: flex;
+  align-items: center;
+}
+
+.hvu-input-price input {
+  flex: 1;
+}
+
+.hvu-input-price span {
+  margin-left: 8px;
+  color: #6b7280;
+}
+
+/* Image upload box */
+.hvu-image-upload-box {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border: 2px dashed #d1d5db;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  background-color: #f9fafb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.hvu-image-upload-box:hover {
+  border-color: #f59e0b;
+  background-color: #fffaf0;
+}
+
+/* Description full width */
+.hvu-description-full {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  padding-right: 15px;
+}
+
+textarea {
+  width: 100%;
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Footer buttons */
+.hvu-form-footer {
+  grid-column: span 2;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.hvu-btn-cancel,
+.hvu-btn-add {
+  padding: 8px 22px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.hvu-btn-cancel {
+  background: white;
+  border: 1px solid #d1d5db;
+  color: #374151;
+}
+.hvu-btn-cancel:hover {
+  background: #f9fafb;
+}
+
+.hvu-btn-add {
+  background: #d97706;
+  color: white;
+  border: none;
+}
+.hvu-btn-add:hover {
+  background: #b45309;
+}
+
+.hvu-error-text {
+  color: #dc2626;
+  font-size: 0.85rem;
+  margin-top: 3px;
+}
+
+.hvu-del-btn {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-right: auto;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Confirmation Popup Styles */
+.hvu-confirm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  animation: fadeIn 0.2s ease-out;
+}
+
+.hvu-confirm-dialog {
+  background: white;
+  border-radius: 12px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  animation: slideDown 0.25s ease-out;
+  overflow: hidden;
+}
+
+.hvu-confirm-header {
+  background: #f97316;
+  color: white;
+  padding: 16px 20px;
+  border-bottom: 1px solid #ea580c;
+}
+
+.hvu-confirm-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.hvu-confirm-body {
+  padding: 24px 20px;
+  color: #374151;
+}
+
+.hvu-confirm-body p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.hvu-confirm-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 16px 20px;
+  background: #f9fafb;
+  border-top: 1px solid #e5e7eb;
+}
+
+.hvu-confirm-cancel-btn,
+.hvu-confirm-ok-btn {
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+  border: none;
+}
+
+.hvu-confirm-cancel-btn {
+  background: white;
+  border: 1px solid #d1d5db;
+  color: #374151;
+}
+
+.hvu-confirm-cancel-btn:hover {
+  background: #f3f4f6;
+  border-color: #9ca3af;
+}
+
+.hvu-confirm-ok-btn {
+  background: #f97316;
+  color: white;
+}
+
+.hvu-confirm-ok-btn:hover {
+  background: #ea580c;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

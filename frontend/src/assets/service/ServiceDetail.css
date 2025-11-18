@@ -1,0 +1,106 @@
+.sd-detail-box {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 18px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.sd-detail-empty {
+    background: #fafafa;
+    border: 1px dashed #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    color: #888;
+    font-size: 0.95rem;
+}
+
+.sd-detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.sd-detail-header h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.sd-edit-btn {
+    background: #d97706;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.sd-edit-btn:hover {
+    background: #b45309;
+}
+
+.sd-detail-img {
+    width: 70%;
+    aspect-ratio: 1 / 1;
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+    object-fit: cover;
+    background-color: #f9fafb;
+    margin-bottom: 14px;
+    display: block;
+}
+
+.sd-desc {
+    font-size: 0.95rem;
+    color: #4b5563;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.sd-detail-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 6px;
+    font-weight: 500;
+}
+
+.sd-detail-meta .sd-price {
+    color: #111827;
+}
+
+.sd-detail-name-category {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sd-detail-name-category h2 {
+    font-weight: 500;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.sd-detail-category-badge {
+    background: #ef4444;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.sd-add-btn {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}

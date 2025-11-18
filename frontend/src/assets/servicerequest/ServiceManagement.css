@@ -1,0 +1,23 @@
+.sm-content {
+    width: 79%;
+    padding-top: 6%;
+    padding-left: 19%;
+    margin-bottom: 5%;
+    
+}
+
+.sm-content > div {
+  margin-bottom: 20px; /* khoảng cách giữa button và list/add form */
+}
+
+.orange-btn.active-btn {
+  background-color: #fff;
+  color: #d97706;
+  cursor: default; /* con trỏ không đổi */
+}
+
+/* disabled prop tự động tắt hover và click */
+.orange-btn:disabled {
+  pointer-events: none;
+  opacity: 1; /* giữ nguyên màu, không mờ */
+}

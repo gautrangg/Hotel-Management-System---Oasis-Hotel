@@ -1,0 +1,614 @@
+/* General Styles */
+.t-roomdetail-container {
+    background-color: #fff;
+    margin-top: 2%;
+}
+
+.t-roomdetail-main-wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+}
+
+@media (min-width: 640px) {
+    .t-roomdetail-main-wrapper {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .t-roomdetail-main-wrapper {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+/* Header Section */
+.t-roomdetail-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.t-roomdetail-header-decorator {
+    display: inline-block;
+    width: 4rem;
+    height: 1px;
+    background-color: #d1d5db;
+}
+
+.t-roomdetail-header-title {
+    font-size: 3rem;
+    color: #1f2937;
+    margin-top: 1rem;
+}
+
+.t-roomdetail-breadcrumbs {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-top: 1rem;
+}
+
+.t-roomdetail-breadcrumbs a:hover {
+    color: #ea580c;
+}
+
+.t-roomdetail-breadcrumbs span {
+    margin: 0 0.5rem;
+}
+
+.t-roomdetail-breadcrumbs .t-roomdetail-current-page {
+    color: #1f2937;
+}
+
+/* Main Content Layout */
+.t-roomdetail-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+    .t-roomdetail-layout {
+        flex-direction: row;
+    }
+}
+
+.t-roomdetail-left-column {
+    width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .t-roomdetail-left-column {
+        width: 66.666667%;
+    }
+}
+
+.t-roomdetail-right-column {
+    width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .t-roomdetail-right-column {
+        width: 33.333333%;
+    }
+}
+
+/* Image Gallery */
+@keyframes fadeIn {
+    from {
+        opacity: 0.6;
+        transform: scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.t-roomdetail-gallery-main-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    aspect-ratio: 16 / 9;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.t-roomdetail-gallery-thumbnails {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+.t-roomdetail-gallery-thumbnail-item {
+    flex: 1; 
+    min-width: 100px;
+    aspect-ratio: 16 / 9;
+}
+
+.t-roomdetail-gallery-thumbnail-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.t-roomdetail-gallery-thumbnail-img:hover {
+    opacity: 0.75;
+    transform: scale(1.05);
+}
+
+.t-roomdetail-gallery-thumbnail-img.active {
+    opacity: 1;
+    outline: 3px solid #f97316;
+    outline-offset: 2px;
+    transform: scale(1.05);
+}
+
+/* Description */
+.t-roomdetail-description {
+    margin-top: 2rem;
+    color: #4b5563;
+    line-height: 1.75;
+}
+
+.t-roomdetail-description p {
+    margin-bottom: 1rem;
+}
+
+/* Amenity Section */
+.t-roomdetail-amenities-section {
+    margin: 5% 0;
+
+}
+
+.t-roomdetail-section-title {
+    font-size: 1.875rem;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+}
+
+.t-roomdetail-amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .t-roomdetail-amenities-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.t-roomdetail-amenity-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    height: 8rem;
+}
+
+.t-roomdetail-amenity-item span {
+    margin-top: 0.5rem;
+    color: #374151;
+    font-size: 0.875rem;
+}
+
+.t-roomdetail-rooms-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.t-roomdetail-rooms-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.t-roomdetail-room-item {
+    border: 1px solid #ea580c;
+    border-radius: 0.75vw;
+    padding: 0.5rem 1rem;
+    width: 80px;
+    color: #ea580c;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+}
+
+.t-roomdetail-room-item.selected {
+    background-color: #ea580c;
+    color: #fff;
+}
+
+/* Booking Form */
+.t-roomdetail-booking-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    border: 1px solid #e5e7eb;
+    position: sticky;
+    top: 5rem;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.07), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.t-roomdetail-booking-card-subtitle {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #ea580c;
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+
+.t-roomdetail-booking-card-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-top: 0.25rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.t-roomdetail-booking-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+}
+
+.t-roomdetail-form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.t-roomdetail-form-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #4b5563;
+    margin-bottom: 0.5rem;
+}
+
+.t-roomdetail-input-wrapper {
+    position: relative;
+}
+
+.t-roomdetail-input-icon {
+    position: absolute;
+    left: 0.875rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #9ca3af; 
+    pointer-events: none; 
+}
+
+.t-roomdetail-form-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    color: #1f2937;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.t-roomdetail-form-input.with-icon {
+    padding-left: 3rem;
+    cursor: pointer;
+}
+
+.t-roomdetail-form-input:focus {
+    outline: none;
+    border-color: #fb923c;
+    box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.2);
+}
+
+.t-roomdetail-form-input::placeholder {
+    color: #9ca3af;
+}
+
+input[type="date"].t-roomdetail-form-input {
+    color: #1f2937;
+}
+
+.t-roomdetail-form-input[type=number]::-webkit-inner-spin-button,
+.t-roomdetail-form-input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.t-roomdetail-form-input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.t-roomdetail-form-button {
+    width: 100%;
+    background-color: #fb923c;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.875rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease-in-out;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.t-roomdetail-form-button:hover {
+    background-color: #ff8d2f;
+    transform: translateY(-1px);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.1);
+}
+
+/* Availability Calendar */
+.t-roomdetail-calendar-container {
+    margin-top: 2.5rem;
+}
+
+.t-roomdetail-calendar-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+@media (min-width: 768px) {
+    .t-roomdetail-calendar-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.t-roomdetail-calendar-month-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0 0.5rem;
+}
+
+.t-roomdetail-calendar-nav-button {
+    color: #ea580c;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.t-roomdetail-calendar-nav-button:hover {
+    color: #9a3412;
+}
+
+.t-roomdetail-calendar-month-name {
+    font-weight: 600;
+    color: #374151;
+}
+
+.t-roomdetail-calendar-days-header,
+.t-roomdetail-calendar-days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.25rem;
+    text-align: center;
+}
+
+.t-roomdetail-calendar-days-header div {
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+}
+
+.t-roomdetail-calendar-day {
+    border: 1px solid #e5e7eb;
+    padding: 0.5rem 0;
+    text-align: center;
+    font-size: 0.875rem;
+    border-radius: 10px;
+}
+
+.legend-item {
+    display: flex;
+    gap: 10px;
+    margin: 5px 0;
+    align-items: center;
+}
+
+.legend-item .legend-color {
+    padding: 0.5rem 1rem;
+    text-align: center;
+    font-size: 0.875rem;
+    border-radius: 10px;
+}
+
+.legend-item .legend-color.available {
+    color: #ffffff;
+    border: 1px solid #fb923c;
+    background-color: #ff9f50;
+}
+
+.legend-item .legend-color.booked {
+    background-color: #ffffff;
+    border: 1px dashed #c1c1c1;
+    color: #8b8b8b;
+}
+
+.t-roomdetail-calendar-day.available {
+    color: #ffffff;
+    border: 1px solid #fb923c;
+    background-color: #ff9f50;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.t-roomdetail-calendar-day.booked {
+    background-color: #ffffff;
+    border: 1px dashed #c1c1c1;
+    color: #8b8b8b;
+    cursor: pointer;
+}
+
+.t-roomdetail-calendar-day.available:hover {
+    background-color:#ffffff;
+    color: #fb923c;
+}
+
+.t-roomdetail-calendar-day.today {
+    background-color: #ea580c;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 9999px;
+}
+
+.t-roomdetail-price-card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #e5e7eb;
+}
+
+.t-roomdetail-price-label {
+    font-size: 0.875rem;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+}
+
+.t-roomdetail-price-amount {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #ea580c;
+}
+/* --- Styles for Booking Form Layout & Custom Elements --- */
+
+/* 1. Hợp nhất layout form, chỉ sử dụng 'display: grid' */
+.t-roomdetail-booking-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Tạo 2 cột bằng nhau */
+    gap: 16px; /* Hoặc 1.25rem tùy bạn muốn, 16px = 1rem */
+}
+
+/* 2. Giữ nguyên class 'full-width' vì nó hoạt động tốt với grid */
+.full-width {
+    grid-column: 1 / -1; /* Item sẽ chiếm toàn bộ chiều rộng (cả 2 cột) */
+}
+
+/* 3. Xóa class '.half-width' không cần thiết */
+/* Khi sử dụng 'display: grid' với 2 cột, các item không có class 'full-width' 
+   sẽ tự động chiếm 1 cột (tức là 50% chiều rộng). 
+   Vì vậy, class '.half-width' và thuộc tính 'width: calc(...)' không còn cần thiết nữa.
+*/
+.t-roomdetail-form-group.half-width {
+    /* Thuộc tính width: calc(...) đã được xóa để tránh xung đột */
+}
+
+/* --- Styles for Custom Room Selector in Booking Form --- */
+.t-roomdetail-custom-select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.t-roomdetail-custom-select-trigger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #4b5563;
+    transition: border-color 0.2s;
+}
+
+.t-roomdetail-custom-select-trigger:hover {
+    border-color: #d1d5db;
+}
+
+.t-roomdetail-custom-select-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    z-index: 10;
+    max-height: 200px;
+    overflow-y: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.t-roomdetail-rooms-grid-in-form {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.t-roomdetail-rooms-row-in-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.t-roomdetail-rooms-row-in-form .t-roomdetail-room-item {
+    flex-grow: 1;
+}
+
+.t-roomdetail-form-input.readonly {
+    background-color: #f3f4f6;
+    cursor: not-allowed;
+    color: #6b7280;
+}
+
+.t-roomdetail-validation-error {
+    width: 100%;
+    color: #ef4444;
+    font-size: 0.875rem;
+    margin-top: -8px;
+    margin-bottom: 8px;
+}
+
+.t-roomdetail-form-button:disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.bx.bxs-user-check {
+    font-size: 10px;
+}
+
+.t-roomdetail-room-item.disabled {
+  background-color: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+  border-color: #d1d5db;
+}
+
+.t-roomdetail-room-item.disabled:hover {
+  background-color: #f3f4f6;
+  color: #9ca3af;
+  border-color: #d1d5db;
+}

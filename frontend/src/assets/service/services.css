@@ -1,0 +1,26 @@
+.hvu-table-container {
+  padding-right: 200px;             /* khoảng cách với lề */
+  max-width: 1200px;         /* giới hạn chiều rộng */
+  margin: 0 auto;            /* căn giữa */
+  overflow-x: auto;          /* thêm scroll ngang nếu bảng quá to */
+}
+
+.hvu-service-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.hvu-service-table th,
+.hvu-service-table td {
+  border: 1px solid #ff7b00;
+  padding: 10px 14px;
+  text-align: left;
+}
+
+.hvu-service-table th {
+  background-color: #ffffff;
+}
+
+.hvu-service-table tr:hover {
+  background-color: #fefefe;
+}

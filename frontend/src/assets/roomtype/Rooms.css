@@ -1,0 +1,190 @@
+/* Tổng thể trang */
+.t-customer-rooms-container {
+    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+}
+
+.t-customer-rooms-hero {
+    background: url('/room1.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 120px 20px;
+    position: relative;
+}
+
+.t-customer-rooms-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.t-customer-rooms-hero h1 {
+    font-size: 3rem;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    font-weight: 500;
+}
+
+.t-customer-rooms-hero p {
+    font-size: 1.2rem;
+    position: relative;
+    width: 95%;
+    text-align: center;
+    z-index: 1;
+}
+
+.t-rooms-main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.t-customer-rooms-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    align-items: center; 
+}
+
+.t-customer-rooms-controls input,
+.t-customer-rooms-controls select {
+    flex: 1;
+    min-width: 180px;
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.75vw;
+    font-size: 0.95rem;
+    color: #555;
+    background-color: #fdfdfd;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.t-customer-rooms-controls input:focus,
+.t-customer-rooms-controls select:focus {
+    border-color: #D96704;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(217, 103, 4, 0.2);
+}
+
+.t-customer-rooms-search {
+    flex: 2;
+    min-width: 280px;
+}
+
+.t-customer-rooms-price-filter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1.5;
+    min-width: 250px;
+}
+
+.t-customer-rooms-price-filter span {
+    color: #777;
+}
+
+.t-customer-rooms-sort {
+    flex: 1;
+    min-width: 160px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23666'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E"); /* Icon mũi tên tùy chỉnh */
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+    padding-right: 40px;
+}
+
+.t-customer-rooms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+/* Thẻ thông tin từng phòng */
+.t-customer-room-card {
+    background-color: #fff;
+    border-radius: 1vw;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.t-customer-room-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.t-customer-room-card-image-wrapper {
+    position: relative;
+}
+
+.t-customer-room-card-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.t-customer-room-card-price {
+    border: 1px solid #d7d7d7;
+    color: #D96704;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    width: fit-content;
+}
+
+.t-customer-room-card-price-night {
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.t-customer-room-card-content {
+    padding: 15px;
+}
+
+.t-customer-room-card-name {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.t-customer-room-card-details {
+    display: flex;
+    gap: 20px;
+    color: #777;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+.t-customer-room-card-details span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.t-customer-room-card-description {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.t-customer-room-card-button {
+    padding: 5px 10px;
+}

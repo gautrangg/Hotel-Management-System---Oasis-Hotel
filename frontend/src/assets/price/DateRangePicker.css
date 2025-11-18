@@ -1,0 +1,158 @@
+.pa-date-picker-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.pa-date-picker-backdrop.visible {
+    opacity: 1;
+}
+
+.pa-date-picker-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    width: auto;
+    max-width: 800px;opacity: 0;
+    transform: scale(0.95) translateY(-10px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.pa-date-picker-backdrop.visible .pa-date-picker-container {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+.pa-calendars-wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.pa-calendar {
+    width: 350px;
+}
+
+.pa-calendar-header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.pa-calendar-header h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.pa-nav-button {
+    background: none;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.pa-nav-button:hover {
+    background: #f0f0f0;
+}
+
+.pa-days-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.pa-days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+}
+
+.pa-day {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.pa-day:not(.empty):not(.disabled):hover {
+    border: 1px solid #df6500ff;
+}
+
+.pa-day.empty {
+    cursor: default;
+}
+
+.pa-day.disabled {
+    cursor: not-allowed;
+    color: #ccc;
+    text-decoration: line-through;
+}
+.pa-day.disabled .day-price {
+    display: none;
+}
+
+.pa-day-number {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.pa-day-price {
+    font-size: 0.7rem;
+    color: #777;
+}
+
+.pa-day.check-in, .pa-day.check-out {
+    background-color: #df6500ff;
+    color: white;
+}
+.pa-day.check-in .pa-day-price, .pa-day.check-out .pa-day-price {
+    color: white;
+}
+
+.pa-day.in-range {
+    background-color: #ffe8d6;
+}
+
+.pa-date-picker-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+.pa-go-back-btn, .pa-confirm-btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.pa-go-back-btn {
+    background: #fff;
+    border-color: #ccc;
+}
+.pa-confirm-btn {
+    background: #df6500ff;
+    color: white;
+    border-color: #df6500ff;
+}

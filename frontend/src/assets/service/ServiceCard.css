@@ -1,0 +1,95 @@
+.sc-service-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.sc-service-card:hover {
+  border-color: #d97706;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.sc-service-card.selected {
+  border-color: #b45309;
+  box-shadow: 0 0 0 2px rgba(217, 119, 6, 0.3);
+}
+
+.sc-service-info {
+  flex: 1;
+  margin-right: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sc-name-category {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sc-name-category h2 {
+  font-weight: 500;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.sc-category-badge {
+  background: #ef4444;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+}
+
+.sc-desc {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.sc-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+.sc-dot {
+  font-size: 0.9rem;
+}
+
+.sc-text-green-500 {
+  color: #16a34a;
+}
+
+.sc-text-red-500 {
+  color: #dc2626;
+}
+
+.sc-text-yellow-500 {
+  color: #f59e0b;
+}
+
+.sc-text-gray-400 {
+  color: #9ca3af;
+}
+
+.sc-price {
+  font-weight: 500;
+}
+
+.sc-thumb {
+  width: 90px;
+  height: 90px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  object-fit: cover;
+  background-color: #f9fafb;
+}

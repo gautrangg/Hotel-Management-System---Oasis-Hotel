@@ -1,0 +1,194 @@
+/* Checkout Scenario Section */
+.quynh-scenario-section {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.quynh-scenario-box {
+  padding: 20px;
+}
+
+.quynh-scenario-info {
+  background: white;
+  padding: 16px;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+}
+
+.quynh-scenario-info p {
+  margin: 8px 0;
+  color: #374151;
+}
+
+.quynh-scenario-info strong {
+  color: #1f2937;
+}
+
+/* Overlay bao phủ toàn màn hình, có thể cuộn */
+.quynh-invoice-modal {
+  position: fixed;
+  inset: 0; /* top, right, bottom, left = 0 */
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 80px;
+  z-index: 1050; /* Tăng z-index để đảm bảo hiển thị trên các modal khác */
+
+  height: 100vh;
+  overflow-y: scroll;        /* ✅ Chỉ overlay cuộn, dùng thanh cuộn của trình duyệt */
+}
+
+/* Container không cuộn, dài bao nhiêu cũng hiển thị */
+.quynh-invoice-container {
+  transform: scale(0.85);
+  transform-origin: top center;
+  width: 750px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 25px;
+  font-family: "Segoe UI", sans-serif;
+  color: #222;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 100px;      /* ✅ để khi cuộn hết không dính đáy */
+}
+
+/* Khi modal mở — khóa body */
+body.modal-open {
+  overflow: hidden;          /* ✅ Không cho body cuộn */
+}
+
+
+/* Giữ nguyên các phần còn lại của CSS */
+.quynh-invoice-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.quynh-section {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.quynh-section-title {
+  background: #f5f5f5;
+  padding: 8px 12px;
+  font-size: 15px;
+  font-weight: 600;
+  border-bottom: 1px solid #ddd;
+}
+
+/* --- CUSTOMER INFO --- */
+.quynh-customer-box {
+  padding: 12px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.quynh-customer-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.quynh-customer-left p {
+  margin: 2px 0;
+}
+
+.quynh-customer-bottom {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 2px solid #ccc;
+  gap: 4px 20px;
+  margin-top: 10px;
+  font-size: 14px;
+  padding-top: 10px;
+}
+
+.quynh-customer-bottom p span {
+  font-weight: 500;
+}
+
+/* --- TABLES --- */
+.quynh-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.quynh-table th {
+  background: #f7f7f7;
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  font-weight: 600;
+}
+
+.quynh-table td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/* --- SUMMARY --- */
+.quynh-summary {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.quynh-summary p {
+  margin: 6px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quynh-summary span {
+  font-weight: 500;
+  text-align: right;
+  min-width: 150px;
+}
+
+.quynh-total {
+  font-weight: 800;
+  font-size: 16px;
+  color: #222;
+  border-top: 2px solid #ccc;
+  margin-top: 8px;
+  padding-top: 8px;
+}
+
+.quynh-total span {
+  font-weight: 800;
+}
+
+/* --- FOOTER --- */
+.quynh-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  font-size: 14px;
+}
+
+.quynh-footer span {
+  font-weight: 800;
+}
+
+.quynh-status {
+  font-weight: 600;
+  margin-left: 6px;
+}
+
+.quynh-status-paid {
+  color: green;
+}
+
+.quynh-icon {
+  font-size: 16px;
+  color: #555;
+  margin-right: 8px;
+  vertical-align: middle;
+}

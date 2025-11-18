@@ -1,0 +1,2709 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.t-login-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1f2937;
+}
+
+.t-login-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  height: 100%;
+  background: white;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.t-home-link {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  z-index: 10;
+  transition: color 0.2s ease;
+}
+
+.t-home-link:hover {
+  color: #c17400;
+}
+
+.t-home-link i {
+  font-size: 20px;
+}
+
+@media (min-width: 768px) {
+  .t-login-card {
+    grid-template-columns: 3fr 2fr;
+  }
+}
+
+.t-login-left {
+  position: relative;
+  display: none;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .t-login-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.t-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.t-overlay-text {
+  position: relative;
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.t-login-right {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.t-login-right h2 {
+  margin-bottom: 5%;
+  color: #1f2937;
+}
+
+.t-login-right h1 {
+  font-weight: bold;
+  margin-bottom: 5%;
+}
+
+.t-login-right .t-form-group {
+  margin-bottom: 15px;
+}
+
+.t-login-right label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 100%;
+  color: #374151;
+}
+
+.t-login-right input,
+.t-login-right select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  outline: none;
+  font-size: 100%;
+}
+
+form input:focus,
+form select:focus {
+  border-color: #d97706;
+  box-shadow: 0 0 0 2px rgba(217, 119, 6, 0.3);
+}
+
+.t-form-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.t-form-bottom label {
+  display: flex;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="select"],
+input[type="file"],
+input[type="submit"] {
+  width: 100%;
+}
+
+.t-login-button {
+  width: 100%;
+  padding: 3%;
+}
+
+.t-button {
+  color: #ffffff;
+  font-weight: bold;
+  background-color: #d97706;
+  border: 1px solid #d97706;
+  border-radius: 0.5vw;
+  cursor: pointer;
+  font-size: medium;
+  transition: all 0.5s ease;
+}
+
+.t-login-logo {
+  width: 30%;
+}
+
+.t-error-text {
+  color: #d30000;
+  font-style: italic;
+}
+
+.t-button:hover {
+  color: #d97706;
+  background-color: #ffffff;
+}
+
+/** Home Guest Page */
+
+.guest-home-container {
+  width: 100%;
+}
+
+.guest-nav-bar {
+  width: 100%;
+  padding: 0% 6%;
+  border-bottom: 1px solid #cfcfcf;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background: #fff;
+}
+
+.guest-nav-bar-logo {
+  width: 20%;
+}
+
+.guest-nav-bar-action {
+  width: 20%;
+  display: flex;
+  justify-content: end;
+  align-self: center;
+
+}
+
+.guest-nav-bar-action a {
+  padding: 5% 10%;
+}
+
+.guest-nav-bar img {
+  width: 60%;
+}
+
+
+.nav-bar {
+  width: 100%;
+  padding: 0% 6%;
+  border-bottom: 1px solid #cfcfcf;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background: #fff;
+}
+
+.t-book-now {
+  height: 90%;
+  align-self: center;
+}
+
+.nav-bar .logo-container {
+  width: 10%;
+  margin: 0.5% 0;
+}
+
+.nav-logo {
+  width: 100%;
+}
+
+.nav-menu {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-menu a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: #787878;
+  transition: all 0.05s ease;
+  cursor: pointer;
+}
+
+.nav-menu a.active {
+  border-bottom: 3px solid #d97706;
+  color: #000;
+}
+
+.nav-menu a:hover {
+  border-bottom: 3px solid #d97706;
+  color: #000;
+}
+
+.guest-login {
+  width: 8%;
+  padding: 1% 2%;
+  margin: 0.5% 0;
+  text-align: center;
+  justify-content: center;
+}
+
+.main-content {
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 5%;
+}
+
+.content-1 {
+  width: 80%;
+  margin: 0 10%;
+  display: flex;
+  margin-bottom: 2%;
+}
+
+.content-1>.left-content {
+  width: 50%;
+}
+
+.content-1>.right-content {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 250%;
+  font-weight: normal;
+}
+
+.right-content>.image {
+  width: 100%;
+  height: 100%;
+}
+
+.content-2 {
+  width: 80%;
+  margin: 0 10%;
+  display: flex;
+}
+
+.content-2 .left-content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content-2 .left-content .title-description span {
+  color: #d97706;
+  font-size: 120%;
+  text-transform: uppercase;
+}
+
+.content-2 .left-content .description {
+  color: #787878;
+  margin-right: 20%;
+  font-size: 120%;
+  line-height: 200%;
+}
+
+.content-2 .left-content h1 {
+  font-size: 300%;
+}
+
+.content-2 .right-content {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.content-2 .right-content .image {
+  width: 70%;
+  height: auto;
+}
+
+.content-2 .right-content .smaller-image {
+  width: 30%;
+  height: auto;
+}
+
+.content-3 {
+  width: 100%;
+  margin-top: 2%;
+  background-color: #f6f6f6;
+  padding: 2% 0;
+}
+
+.title-description {
+  width: 90%;
+  margin-left: 10%;
+  color: #d97706;
+  font-size: 120%;
+  text-transform: uppercase;
+}
+
+.big-title-description {
+  margin-left: 10%;
+  font-size: 300%;
+  margin-right: 20%;
+}
+
+.blur-description {
+  margin-left: 10%;
+  color: #787878;
+  margin-right: 20%;
+  font-size: 120%;
+  width: 40%;
+  line-height: 200%;
+}
+
+.rooms {
+  display: flex;
+  overflow-x: auto;
+  padding: 0 10%;
+  gap: 2rem;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  align-items: flex-start;
+}
+
+.rooms::-webkit-scrollbar {
+  height: 12px;
+}
+
+.room-card {
+  width: 30vw;
+  flex-shrink: 0;
+  margin: 15px 0;
+}
+
+.room-card-image {
+  width: 100%;
+  overflow: hidden;
+}
+
+.room-card-image img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  transition: transform 0.5s ease;
+}
+
+.room-card-image img:hover {
+  transform: scale(1.05);
+}
+
+.room-name {
+  margin-top: 10px;
+}
+
+.room-price {
+  border: 1px solid #d6d6d6;
+  width: fit-content;
+  padding: 0.5% 2%;
+  border-radius: 0.5vw;
+  margin-top: 2%;
+}
+
+.room-price p strong {
+  color: #d47100;
+}
+
+.room-description {
+  color: #767676;
+  margin-bottom: 8%;
+}
+
+.room-book {
+  color: #d97706;
+  border: 1px solid #d97706;
+  border-radius: 0.5vw;
+  padding: 2% 4%;
+  transition: all 0.5s ease;
+}
+
+.room-book:hover {
+  background-color: #d97706;
+  color: #ffffff;
+}
+
+.room-controls {
+  display: flex;
+  padding: 0 10%;
+  gap: 2%;
+}
+
+.round-button {
+  font-size: 150%;
+  padding: 10px 12px;
+  border-radius: 50%;
+  color: #d97706;
+  background-color: #ffffff;
+  border: 1px solid #d97706;
+  transition: all 0.5s ease;
+}
+
+.round-button:hover {
+  color: #ffffff;
+  background-color: #d97706;
+}
+
+footer {
+  background-color: #3c3b40;
+  color: #c4c4c5;
+  display: flex;
+  justify-content: space-around;
+  padding: 2%;
+}
+
+footer a {
+  color: #c4c4c5;
+  transition: all 0.5s ease;
+}
+
+footer a:hover {
+  color: #d97706;
+}
+
+.content-4 {
+  width: 100%;
+  margin-bottom: 5%;
+}
+
+.travel {
+  width: 80%;
+  margin: 0 10%;
+  display: flex;
+  gap: 2%;
+}
+
+.travel-card {
+  position: relative;
+  width: 25%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 0.5vw;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.travel-card:hover {
+  transform: scale(1.05);
+}
+
+.travel-card-image {
+  width: 100%;
+  height: 100%;
+}
+
+.travel-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.travel-price-tag {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #333;
+  padding: 2% 4%;
+  border-radius: 0.5vw;
+  font-size: 100%;
+  font-weight: 600;
+  z-index: 10;
+}
+
+.travel-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5%;
+  color: white;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2), transparent);
+  transition: background-color 0.3s ease;
+  z-index: 5;
+  transform: translateY(60%);
+  transition: transform 0.4s ease;
+}
+
+.travel-title h3 {
+  font-size: 120%;
+  font-weight: bold;
+  width: 90%;
+  margin-bottom: 20%;
+}
+
+.travel-title p {
+  width: 90%;
+  font-size: 100%;
+  margin-top: 2%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.travel-card:hover .travel-title {
+  transform: translateY(0);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4), transparent);
+}
+
+.travel-card:hover .travel-title p {
+  opacity: 1;
+}
+
+.content-5 {
+  width: 100%;
+}
+
+.restaurant {
+  width: 100%;
+  position: relative;
+}
+
+.restaurant-image {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.restaurant-image img {
+  width: 100%;
+  aspect-ratio: 4/2;
+  display: block;
+  filter: brightness(60%);
+}
+
+.restaurant-description {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  z-index: 2;
+  color: white;
+  max-width: 40%;
+}
+
+.restaurant-description h2 {
+  font-size: 300%;
+}
+
+.restaurant-description p {
+  font-size: 120%;
+  line-height: 200%;
+}
+
+/** Staff Dashboard */
+.staff-dashboard {
+  width: 100%;
+}
+
+/* Header */
+.staff-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+  /* Đảm bảo Header nằm trên */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.staff-header .header-action {
+  margin-right: 5%;
+}
+
+.staff-header .logo img {
+  width: 15%;
+  color: #333;
+  margin-left: 5%;
+}
+
+.staff-header .logo span {
+  color: #4a47d5;
+}
+
+/* Sidebar */
+.staff-sidebar {
+  width: 220px;
+  background: #fff;
+  border-right: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  height: 93vh;
+  overflow-y: auto;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  padding-bottom: 2%;
+}
+
+.staff-sidebar .profile {
+  margin: 10% 5%;
+  width: 90%;
+  display: flex;
+  align-items: center;
+}
+
+.staff-sidebar .profile img {
+  width: 4vw;
+  height: 4vw;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  margin-right: 5%;
+}
+
+.staff-sidebar .profile div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.staff-sidebar .profile div h4,
+p {
+  margin: 2%;
+  width: 100%;
+}
+
+.staff-sidebar .profile div h4 {
+  font-size: 100%;
+}
+
+.staff-sidebar .profile div p {
+  color: #5d5d5d;
+}
+
+.sidebar-menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar-menu a {
+  width: 100%;
+  padding: 5% 0;
+  padding-left: 20%;
+  font-size: 100%;
+  margin: 1% 0;
+  color: #767676;
+  transition: all 0.1s ease;
+}
+
+.sidebar-menu a.active {
+  color: #d97706;
+  background-color: #fafafa;
+  border-right: 3px solid #d97706;
+}
+
+.sidebar-menu a i {
+  font-size: 120%;
+}
+
+.sidebar-menu a:hover {
+  color: #d97706;
+  background-color: #fafafa;
+  border-right: 3px solid #d97706;
+}
+
+.staff-main-content {
+  width: 82%;
+  margin-left: 17%;
+  margin-top: 5%;
+}
+
+/* Page Header */
+.page-header {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.page-header h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 8px 0;
+}
+
+.page-header p {
+  color: #64748b;
+  font-size: 16px;
+  margin: 0;
+}
+
+/** Manage Staff */
+
+.t-orange-btn {
+  margin: 0 1%;
+  padding: 1% 2%;
+  background-color: #d97706;
+  border: 1px solid #d97706;
+  color: #fff;
+  font-size: 100%;
+  border-radius: 0.5vw;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.t-orange-btn:hover {
+  background-color: #fff;
+  color: #d97706;
+  border: 1px solid #d97706;
+}
+
+.t-orange-btn.active {
+  color: #ffffff;
+  background-color: #d97706;
+}
+
+.re-orange-btn {
+  margin: 0 1%;
+  padding: 1% 2%;
+  background-color: #fff;
+  border: 1px solid #d97706;
+  color: #d97706;
+  font-size: 100%;
+  border-radius: 0.5vw;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.re-orange-btn:hover {
+  background-color: #d97706;
+  color: #fff;
+}
+
+.re-orange-btn.active {
+  color: #fff;
+  background-color: #d97706;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.staff-table {
+  width: 99%;
+  border-collapse: collapse;
+  margin-bottom: 1%;
+}
+
+.staff-table th,
+.staff-table td {
+  border: 1px solid #ddd;
+  padding: 1% 0.5%;
+  text-align: center;
+  width: fit-content;
+}
+
+.staff-table th:nth-child(2),
+.staff-table td:nth-child(2) {
+  width: 10%;
+}
+
+.staff-table td .staff-avatar {
+  width: 100%;
+}
+
+.staff-actions {
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+
+.search-container {
+  width: 100%;
+  margin: 1% 0;
+  display: flex;
+}
+
+.search-container select {
+  border-radius: 0.5vw;
+  margin-right: 1%;
+  width: 20%;
+}
+
+.search-container input {
+  width: 50%;
+  padding: 1%;
+  border-radius: 0.5vw;
+  border: 1px solid #c4c4c5;
+}
+
+.search-container input:focus {
+  border-color: #d97706;
+}
+
+.t-delete-btn {
+  background-color: #ffffff;
+  color: #df0000;
+  font-size: 100%;
+  padding: 2%;
+  border-radius: 0.5vw;
+  border: 1px solid #df0000;
+  transition: all 0.1s ease;
+  cursor: pointer;
+}
+
+.t-delete-btn:hover {
+  color: #ffffff;
+  background-color: #df0000;
+}
+
+.add-staff-form {
+  width: 100%;
+  padding-bottom: 10%;
+}
+
+.add-staff-form table {
+  width: 100%;
+}
+
+.add-staff-form tbody {
+  width: 100%;
+}
+
+.add-staff-form tr {
+  width: 100%;
+}
+
+.add-staff-form td {
+  width: 48%;
+  padding: 1%;
+  font-size: 90%;
+}
+
+.add-staff-form td p {
+  font-size: 90%;
+}
+
+.add-staff-form input[type="checkbox"] {
+  width: fit-content;
+}
+
+.add-staff-form input[type="submit"] {
+  width: 50%;
+  padding: 2% 4%;
+  border-radius: 1vw;
+  margin: 1% auto;
+}
+
+.preview-image {
+  width: 20%;
+}
+
+.add-staff-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.add-staff-form .t-form-container {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
+
+.t-form-left {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+}
+
+.t-photo-upload {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  border-radius: 1vw;
+}
+
+.t-photo-upload input[type="file"] {
+  width: 86%;
+  margin: 6% 0;
+  border: 1px solid #ccc;
+  padding: 4%;
+  border-radius: 0.75vw;
+}
+
+.t-preview-image {
+  margin-top: 10px;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.t-roles-section {
+  border: 1px solid #ccc;
+  padding: 1%;
+  border-radius: 0.5vw;
+  text-align: left;
+  font-size: 90%;
+}
+
+.t-form-left .t-roles-section p,
+.t-form-left .t-roles-section div {
+  margin-left: 5%;
+}
+
+.t-form-left .t-roles-section input {
+  margin-right: 5%;
+}
+
+.t-form-right {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.t-form-right .t-section {
+  border: 1px solid #ccc;
+  padding: 2%;
+  border-radius: 1vw;
+}
+
+.t-form-right .t-section .t-section-row td,
+.t-form-right .t-section .t-section-row h3 {
+  margin: 0 auto;
+}
+
+.t-section-row input,
+.t-section-row select {
+  font-size: 90%;
+}
+
+.t-section-row .password-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.t-section-row .password-wrapper input {
+  width: 100%;
+  padding-right: 35px;
+}
+
+.t-section-row .password-wrapper i {
+  position: absolute;
+  right: 10px;
+  top: 30px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #555;
+}
+
+.t-form-right .t-section table .t-section-row td p,
+.t-form-right .t-section table .t-section-row td span {
+  margin: 0.5% 0;
+}
+
+.t-section .t-section-row td input,
+.t-section .t-section-row td select {
+  margin: 1% 0;
+  width: 100%;
+  padding: 0.5vw;
+  border-radius: 0.5vw;
+  border: 1px solid #c4c4c5;
+}
+
+.t-section .t-section-row td select {
+  width: 98%;
+}
+
+.t-section .t-section-row td .t-date-input {
+  width: 89%;
+}
+
+.error-text {
+  color: red;
+  font-size: 80%;
+}
+
+/**** Grid Staff             ***/
+.t-staff-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.t-staff-grid-card {
+  border: 1px solid #ddd;
+  border-radius: 1vw;
+  border-bottom: 5px solid #d97706;
+  padding: 15px;
+  text-align: center;
+  background: #fff;
+  transition: transform 0.2s;
+}
+
+.t-staff-grid-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.t-staff-grid-avatar img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.t-staff-grid-info h3 {
+  margin: 5px 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.t-staff-grid-roles {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.t-staff-grid-contact {
+  margin: 5px 0;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background: #ffffff;
+  font-size: 12px;
+  text-align: left;
+}
+
+.t-staff-grid-contact p {
+  margin: 6px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.t-staff-grid-label {
+  font-weight: 600;
+}
+
+.t-staff-grid-footer {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.t-staff-grid-footer button {
+  border: none;
+  background: none;
+  color: #444;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.t-staff-grid-footer button:hover {
+  text-decoration: underline;
+}
+
+.staff-form-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.staff-form-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.staff-form-sidebar {
+  background: #fff;
+  width: 40%;
+  height: 100%;
+  overflow-y: auto;
+  padding: 20px;
+  position: relative;
+  border-left: 2px solid #ccc;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.staff-form-sidebar.open {
+  transform: translateX(0);
+}
+
+.staff-form-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+/*--------------Quynh-------------------*/
+
+
+.q-password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.q-password-wrapper input {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.q-eye-icon {
+  position: absolute;
+  right: 10px;
+  width: 24px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.q-login-container {
+  display: flex;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: url("/hotel-bg.jpg") no-repeat center center/cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  /* làm ảnh tối đi */
+  padding: 40px 80px;
+  box-sizing: border-box;
+}
+
+/* Bên trái */
+.q-login-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  padding-right: 40px;
+}
+
+.q-login-left h1 {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.q-login-left p {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 480px;
+}
+
+/* Bên phải */
+.q-login-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.q-login-box {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.q-login-box h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.q-sub-text {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Form */
+.q-login-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.q-login-box input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  color: black;
+  background-color: #fff;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.q-login-box input:focus {
+  outline: none;
+  border-color: #e63946;
+  box-shadow: 0 0 5px rgba(230, 57, 70, 0.5);
+}
+
+.q-remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-top: -5px;
+}
+
+.q-remember-forgot a {
+  color: #e63946;
+  text-decoration: none;
+}
+
+.q-remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.q-remember-forgot label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.q-remember-forgot input.q-remember {
+  margin: 0;
+}
+
+
+.q-remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+.q-btn-login {
+  width: 100%;
+  background: #e63946;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.q-btn-login:hover {
+  background: #c82333;
+}
+
+
+.q-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.q-input-wrapper input {
+  width: 100%;
+  padding-right: 60px;
+}
+
+.q-counter {
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+  font-size: 12px;
+  color: #888;
+}
+
+
+/* Or text */
+.q-or-text {
+  margin: 20px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Social login */
+.q-social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.q-social-buttons button {
+  flex: 1;
+  min-width: 80px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.q-social-buttons button:hover {
+  opacity: 0.85;
+}
+
+.q-social-buttons .q-twitter {
+  background: #1da1f2;
+}
+
+.q-social-buttons .q-facebook {
+  background: #076abb;
+}
+
+.q-social-buttons .q-google {
+  background: #ba2828;
+}
+
+.q-social-buttons .q-linkedin {
+  background: #0077b5;
+}
+
+/* Register text */
+.q-register-text {
+  margin-top: 20px;
+  color: #555;
+  font-size: 14px;
+}
+
+.q-register-text a {
+  color: #e63946;
+  text-decoration: none;
+}
+
+.q-register-text a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive: mobile chỉ hiện form */
+@media (max-width: 768px) {
+  .q-login-left {
+    display: none;
+  }
+
+  .q-login-container {
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .q-login-right {
+    flex: 1;
+    width: 100%;
+  }
+
+  .q-login-box {
+    padding: 30px;
+  }
+}
+
+
+
+.q-register-container {
+  display: flex;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: url("/hotel-bg.jpg") no-repeat center center/cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  padding: 40px 80px;
+  box-sizing: border-box;
+}
+
+/* Bên trái */
+.q-register-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  padding-right: 40px;
+}
+
+.q-register-left h1 {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.q-register-left p {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 480px;
+}
+
+/* Bên phải */
+.q-register-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.q-register-box {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.q-register-box h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.q-sub-text {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Form */
+.q-register-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.q-register-box input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  color: black;
+  background-color: #fff;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.q-register-box input:focus {
+  outline: none;
+  border-color: #e63946;
+  box-shadow: 0 0 5px rgba(230, 57, 70, 0.5);
+}
+
+.q-btn-register {
+  width: 100%;
+  background: #e63946;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s ease;
+}
+
+.q-btn-register:hover {
+  background: #c82333;
+}
+
+.q-error-message {
+  color: #e63946;
+}
+
+.q-success-message {
+  color: green;
+  margin-top: 10px;
+}
+
+.q-login-text {
+  margin-top: 20px;
+  color: #555;
+  font-size: 14px;
+}
+
+.q-login-text a {
+  color: #e63946;
+  text-decoration: none;
+}
+
+.q-login-text a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive: mobile chỉ hiện form */
+@media (max-width: 768px) {
+  .q-register-left {
+    display: none;
+  }
+
+  .q-register-container {
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .q-register-right {
+    flex: 1;
+    width: 100%;
+  }
+
+  .q-register-box {
+    padding: 30px;
+  }
+}
+
+/* --- Styles for Room Management Page --- */
+.room-table-container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
+}
+
+.room-table-header {
+  padding: 24px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.header-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 24px;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background-color: #d97706;
+  color: #ffffff;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #b45f06;
+}
+
+.filter-select {
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  background-color: #ffffff;
+  border-radius: 6px;
+  color: #000000;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.room-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.room-table th,
+.room-table td {
+  padding: 16px;
+  text-align: left;
+  color: #000000;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.room-table th {
+  background-color: #f5f5f6;
+  font-weight: 600;
+}
+
+.room-table .row-odd {
+  background-color: #f8fafb;
+}
+
+.room-table .row-even {
+  background-color: #ffffff;
+}
+
+.checkin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.checkin-table th,
+.checkin-table td {
+  padding: 16px;
+  text-align: left;
+  color: #000000;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.checkin-table th {
+  background-color: #f5f5f6;
+  font-weight: 600;
+}
+
+.checkin-main-content {
+  padding: 20px;
+}
+
+.checkin-header {
+  margin-bottom: 20px;
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  border-radius: 4px;
+  color: #4b4b4b;
+  transition: background-color 0.2s;
+}
+
+.btn-icon:hover {
+  background-color: #f5f5f6;
+}
+
+.pagination-container {
+  padding: 24px;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-page {
+  background-color: transparent;
+  border: 1px solid #e0e0e0;
+  color: #4b4b4b;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-page:hover {
+  background-color: #f5f5f6;
+  border-color: #d97706;
+}
+
+.btn-page.active {
+  background-color: #d97706;
+  color: #ffffff;
+  border-color: #d97706;
+}
+
+/* --- Thêm đoạn CSS cho Panel trượt từ đây --- */
+
+.panel-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.panel-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.room-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  max-width: 480px;
+  /* Chiều rộng của panel */
+  background-color: #ffffff;
+  box-shadow: -2px 0 15px rgba(0, 0, 0, 0.2);
+  transform: translateX(100%);
+  /* Ẩn panel ra ngoài màn hình */
+  transition: transform 0.3s ease-in-out;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+}
+
+.room-panel.open {
+  transform: translateX(0);
+  /* Hiện panel vào trong màn hình */
+}
+
+.checkin-panel {
+  /* Kế thừa từ room-panel */
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+  border-bottom: 1px solid #e0e0e0;
+  flex-shrink: 0;
+}
+
+.panel-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #111;
+}
+
+.panel-close-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #888;
+  line-height: 1;
+}
+
+.panel-form {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  /* Cho phép cuộn nếu form quá dài */
+  flex-grow: 1;
+}
+
+.panel-form .form-group {
+  margin-bottom: 18px;
+}
+
+.panel-form .form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+.panel-form .form-group label span {
+  color: #e53e3e;
+}
+
+.panel-form .form-group input,
+.panel-form .form-group select,
+.panel-form .form-group textarea {
+  width: 95%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.panel-form .form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.read-only-group {
+  margin-bottom: 18px;
+}
+
+.read-only-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+.read-only-value {
+  padding: 10px 12px;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #495057;
+}
+
+.panel-form .form-submit-btn {
+  width: 100%;
+  margin-top: auto;
+  padding: 12px;
+  font-size: 16px;
+
+}
+
+/* --- Modal Styles (from other branch) --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  width: 50%;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 10px;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-actions {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.modal-actions button {
+  padding: 2% 10%;
+}
+
+.role-checkboxes input[type="checkbox"] {
+  width: fit-content;
+}
+
+.update-staff div {
+  margin: 1%;
+}
+
+.password-input {
+  position: relative;
+  display: inline-block;
+  width: 93%;
+}
+
+.password-input input {
+  width: 100%;
+}
+
+.password-input i {
+  position: absolute;
+  top: 70%;
+  right: -1%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  color: #555;
+}
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  color: inherit;
+  /* màu mặc định của icon */
+}
+
+.icon-btn:hover {
+  background-color: #f97316;
+  /* màu nền khi hover */
+  color: white;
+  /* đổi màu icon nếu muốn */
+}
+
+/* NHH ================================================ */
+/* Thêm vào file style.css của bạn */
+
+.list-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+/* Thanh Filter */
+.filter-bar {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  /* Tăng khoảng cách */
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.filter-bar select {
+  padding: 8px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  min-width: 150px;
+}
+
+.records-per-page {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #6c757d;
+}
+
+.records-per-page select {
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+}
+
+.pagination {
+  display: flex;
+  gap: 5px;
+}
+
+.pagination button {
+  border: 1px solid #dee2e6;
+  background-color: #fff;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.pagination button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: #f8f9fa;
+  color: #d97706;
+  border-color: #d97706;
+}
+
+.pagination button.active {
+  background-color: #d97706;
+  color: #fff;
+  border-color: #d97706;
+  font-weight: bold;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 24px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.2s ease-in-out;
+}
+
+/* --- 2. Style cho BUTTON CHÍNH MÀU CAM --- */
+.btn-primary {
+  background-color: #f97316;
+  color: #ffffff;
+  border-color: #f97316;
+}
+
+.btn-primary:hover {
+  background-color: #ea580c;
+  border-color: #ea580c;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: #ffffff;
+  border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+  border-color: #5a6268;
+}
+
+/* --- 3. Style cho NÚT SUBMIT TRONG PANEL (Check-in, Add/Edit Room) --- */
+.panel-submit-button {
+  width: 100%;
+  margin-top: auto;
+  /* Đẩy nút xuống dưới cùng */
+  padding: 12px 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f97316;
+  color: #ffffff;
+  border: 1px solid #f97316;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.panel-submit-button:hover {
+  background-color: #ea580c;
+  border-color: #ea580c;
+}
+
+
+.btn-action {
+  padding: 6px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  margin: 0 3px;
+  white-space: nowrap;
+}
+
+.btn-action-edit {
+  background-color: #fff;
+  border-color: #f97316;
+  color: #f97316;
+}
+
+.btn-action-edit:hover {
+  background-color: #f97316;
+  color: #fff;
+}
+
+.btn-action-delete {
+  background-color: #ef4444;
+  border-color: #ef4444;
+  color: #fff;
+}
+
+.btn-action-delete:hover {
+  background-color: #dc2626;
+  border-color: #dc2626;
+}
+
+.list-form-header .btn {
+  flex-grow: 0;
+  margin-left: auto;
+}
+
+
+.panel-submit-button {
+  flex-grow: 0;
+}
+
+.btn-link-change-room {
+  background: none;
+  border: none;
+  color: #f97316; /* Màu cam chính */
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 5px 0;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.btn-link-change-room:hover {
+  color: #ea580c; /* Màu cam đậm hơn */
+}
+
+/* Khung chứa dropdown đổi phòng */
+.change-room-container {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.change-room-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+.change-room-container select {
+  width: 95%; /* Giống các input khác */
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #fff; /* Đảm bảo nền trắng */
+}
+
+.change-room-container p {
+  font-size: 14px;
+  color: #555;
+}
+
+.change-room-container .no-rooms-note {
+  font-size: 13px;
+  color: #777;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+.booking-management-container {
+  padding: 20px;
+  background-color: #f8f9fa; /* Nền xám nhạt */
+}
+
+.booking-management-container h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Thanh tìm kiếm và bộ lọc */
+.filter-search-bar {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.filter-search-bar .filter-select {
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 14px;
+  min-width: 180px;
+}
+
+.filter-search-bar .search-input {
+  flex-grow: 1; /* Chiếm phần còn lại */
+  padding: 10px 15px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Tùy chỉnh bảng booking */
+.booking-table th,
+.booking-table td {
+  padding: 12px 15px; /* Thêm padding cho dễ đọc */
+  vertical-align: top; /* Căn nội dung lên trên */
+}
+
+.booking-table td small {
+  color: #555;
+  font-size: 13px;
+  line-height: 1.4;
+  display: inline-block; /* Để ngắt dòng hoạt động */
+}
+
+.booking-table td strong {
+  color: #111;
+  font-weight: 500;
+}
+
+/* Các nhãn trạng thái (Status Badges) */
+.status-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+.status-confirmed {
+  background-color: #d1ecf1;
+  color: #0c5460;
+}
+.status-checked-in {
+  background-color: #d4edda;
+  color: #155724;
+}
+.status-checked-out {
+  background-color: #e2e3e5;
+  color: #383d41;
+}
+.status-cancelled {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Nút Action */
+.btn-icon {
+    background: none;
+    border: 1px solid transparent;
+    border-radius: 50%; /* Làm tròn nút */
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.btn-icon.btn-edit {
+    color: #007bff; /* Màu xanh dương */
+    border-color: #007bff;
+}
+.btn-icon.btn-edit:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.table-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.records-per-page {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #555;
+}
+
+.records-per-page select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+.booking-detail-admin-container {
+  padding: 20px;
+}
+
+.booking-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.booking-detail-header h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Chia layout 2 cột */
+.booking-detail-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Cột chính 2 phần, cột phụ 1 phần */
+  gap: 20px;
+  padding-bottom: 80px; /* Khoảng trống cho footer dính */
+}
+
+/* Cột chính và cột phụ */
+.detail-column-main {
+  /* Cột chính không cần style đặc biệt */
+}
+
+.detail-column-side {
+  /* Cột phụ không cần style đặc biệt */
+}
+
+/* Thẻ card chung */
+.detail-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+}
+
+.detail-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+/* Layout form */
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+.form-row .form-group {
+  flex: 1; /* Chia đều không gian */
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #333;
+}
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box; /* Quan trọng */
+}
+.form-group input:disabled {
+  background-color: #f8f9fa;
+  color: #555;
+  cursor: not-allowed;
+}
+
+/* Ghi chú (dùng cho cảnh báo DTO) */
+.form-group-note {
+  font-size: 13px;
+  color: #555;
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+.form-group-note i {
+  margin-right: 5px;
+  color: #856404;
+}
+
+/* Phần Guest Details */
+.guest-info-note {
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 20px;
+  padding: 12px 16px;
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-radius: 6px;
+  font-style: italic;
+}
+
+.guest-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.guest-list-header .btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  max-width: 150px;
+  width: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.guest-list-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.guest-list-form p {
+  font-size: 14px;
+  color: #777;
+  text-align: center;
+  margin-top: 10px;
+}
+/* .guest-row class moved to CheckInPanel.css to avoid conflicts */
+
+/* Guest field grid moved to CheckInPanel.css to avoid conflicts */
+
+.guest-input-name { flex: 3; }
+.guest-input-gender { flex: 1; }
+.guest-input-citizen { flex: 2; }
+
+/* Nút Xóa (Icon) */
+.btn-icon.btn-delete {
+  color: #ef4444; /* Màu đỏ */
+  border-color: #ef4444;
+}
+.btn-icon.btn-delete:hover {
+  background-color: #ef4444;
+  color: #fff;
+}
+
+/* Danh sách dịch vụ */
+.service-request-list {
+  list-style: none;
+  padding-left: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+.service-request-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+}
+.service-request-list li:last-child {
+  border-bottom: none;
+}
+.service-price {
+  font-weight: 500;
+}
+.status-badge-sm { /* Badge nhỏ hơn */
+  font-size: 10px;
+  padding: 3px 6px;
+  border-radius: 8px;
+  text-transform: uppercase;
+}
+.status-badge-sm.pending { background-color: #fff3cd; color: #856404; }
+.status-badge-sm.completed { background-color: #d4edda; color: #155724; }
+.status-badge-sm.cancelled { background-color: #f8d7da; color: #721c24; }
+
+/* Nút Add Service */
+.service-add-btn {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.2s;
+  margin-top: 1rem;
+}
+
+.service-add-btn:hover {
+  background: #5a6268;
+}
+
+.service-add-btn:disabled {
+  background: #adb5bd;
+  cursor: not-allowed;
+}
+
+/* Add Service Modal */
+.add-service-modal {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.add-service-modal h3 {
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.add-service-modal .form-group {
+  margin-bottom: 1rem;
+}
+
+.add-service-modal .form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.add-service-modal .form-group select,
+.add-service-modal .form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.add-service-modal .modal-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.add-service-modal .btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.add-service-modal .btn-secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.add-service-modal .btn-secondary:hover {
+  background: #5a6268;
+}
+
+.add-service-modal .btn-primary {
+  background: #007bff;
+  color: white;
+}
+
+.add-service-modal .btn-primary:hover {
+  background: #0056b3;
+}
+
+/* Thanh action dính (footer) */
+.booking-detail-footer {
+  position: fixed;
+  bottom: 0;
+  left: 17%; /* Bằng chiều rộng sidebar */
+  right: 0;
+  background-color: #fff;
+  padding: 15px 20px;
+  border-top: 1px solid #e0e0e0;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  z-index: 50;
+}
+/* Hiển thị loading trong nút */
+.btn-primary[disabled] {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* CSS cho loading toàn trang */
+.loading-full-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.error-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  color: #dc3545;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.loading-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: #6c757d;
+  font-size: 16px;
+}
+/*================================================== NHH */

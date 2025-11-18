@@ -1,0 +1,511 @@
+/* Container */
+.c-my-bookings-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  min-height: calc(100vh - 200px);
+  margin-top: 5%;
+}
+
+/* Header */
+.c-my-bookings-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.c-my-bookings-header h1 {
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.c-my-bookings-header .c-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Loading & Error */
+.c-loading-spinner {
+  text-align: center;
+  padding: 60px 20px;
+  margin-top: 100px;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.c-error-message {
+  background-color: #fee;
+  border: 1px solid #fcc;
+  color: #c33;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Filter Buttons */
+.c-filter-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.c-filter-btn {
+  padding: 10px 20px;
+  border: 2px solid #ddd;
+  background: white;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  color: #666;
+}
+
+.c-filter-btn:hover {
+  border-color: #cf6100;
+  color: #e2964a;
+  transform: translateY(-2px);
+}
+
+.c-filter-btn.c-active {
+  background:  #cf6100;
+  color: white;
+}
+
+/* Bookings List */
+.c-bookings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Booking Card */
+.c-booking-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid #e0e0e0;
+}
+
+.c-booking-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Card Header */
+.c-booking-card-header {
+  background: linear-gradient(135deg, #ffac63 0%, #cf8c0e 100%);
+  padding: 20px;
+  color: white;
+}
+
+.c-booking-id-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.c-booking-id-section h3 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.c-booking-created {
+  display: flex;
+  gap: 8px;
+  font-size: 0.9rem;
+  opacity: 0.95;
+}
+
+.c-booking-created .c-label {
+  font-weight: 500;
+}
+
+/* Status Badge */
+.c-status-badge {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.c-status-pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.c-status-confirmed {
+  background: #d4edda;
+  color: #155724;
+}
+
+.c-status-checked-in {
+  background: #cce5ff;
+  color: #004085;
+}
+
+.c-status-checked-out {
+  background: #e2e3e5;
+  color: #383d41;
+}
+
+.c-status-cancelled {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.c-status-no-show {
+  background: #f5c6cb;
+  color: #721c24;
+}
+
+/* Card Body */
+.c-booking-card-body {
+  padding: 25px;
+}
+
+.c-booking-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.c-info-section {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+}
+
+.c-price-section {
+  border-left-color: #28a745;
+}
+
+.c-section-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 15px 0;
+  color: #333;
+}
+
+.c-info-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.c-info-row:last-child {
+  margin-bottom: 0;
+}
+
+.c-info-label {
+  color: #666;
+  font-weight: 500;
+}
+
+.c-info-value {
+  color: #333;
+  font-weight: 600;
+  text-align: right;
+}
+
+.c-price-highlight {
+  color: #28a745;
+  font-size: 1.1rem;
+}
+
+.c-success-text {
+  color: #28a745;
+}
+
+/* Card Footer */
+.c-booking-card-footer {
+  padding: 20px;
+  background: #f8f9fa;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+}
+
+.c-btn-cancel {
+  padding: 10px 24px;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.c-btn-cancel:hover {
+  background: #c82333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}
+
+.c-warning-text {
+  color: #856404;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.c-cancelled-text {
+  color: #721c24;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Modal */
+.c-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(3px);
+}
+
+.c-modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.c-modal-content h3 {
+  margin: 0 0 15px 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.c-modal-content p {
+  margin: 10px 0;
+  color: #666;
+  font-size: 1rem;
+}
+
+.c-warning-modal {
+  color: #856404;
+  background: #fff3cd;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.c-modal-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+  justify-content: flex-end;
+}
+
+.c-btn-modal-cancel,
+.c-btn-modal-confirm {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.c-btn-modal-cancel {
+  background: #6c757d;
+  color: white;
+}
+
+.c-btn-modal-cancel:hover {
+  background: #5a6268;
+}
+
+.c-btn-modal-confirm {
+  background: #dc3545;
+  color: white;
+}
+
+.c-btn-modal-confirm:hover {
+  background: #c82333;
+}
+
+.c-btn-modal-cancel:disabled,
+.c-btn-modal-confirm:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Empty State */
+.c-empty-state {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.c-empty-icon {
+  font-size: 5rem;
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+
+.c-empty-state h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.c-empty-state p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.c-btn-primary {
+  padding: 12px 32px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.c-btn-primary:hover {
+  background: #5568d3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* Footer */
+.c-my-bookings-footer {
+  background: #2c3e50;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.c-my-bookings-footer h3 {
+  margin: 0 0 15px 0;
+  font-size: 1.3rem;
+}
+
+.c-my-bookings-footer p {
+  margin: 5px 0;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .c-my-bookings-header h1 {
+    font-size: 2rem;
+  }
+
+  .c-booking-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .c-filter-buttons {
+    justify-content: flex-start;
+  }
+
+  .c-booking-id-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .c-booking-card-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .c-btn-cancel {
+    width: 100%;
+  }
+}
+  .c-btn-view-detail {
+    background: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.c-btn-view-detail:hover {
+    background: #357abd;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(74, 144, 226, 0.3);
+}
+
+.c-info-text {
+    color: #28a745;
+    font-size: 14px;
+    margin: 8px 0 0 0;
+    font-weight: 500;
+}
+.c-btn-feedback,
+.c-btn-view-feedback {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+
+.c-btn-feedback {
+  background: #f97316;
+  color: white;
+}
+
+.c-btn-feedback:hover {
+  background: #ea580c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+}
+
+.c-btn-view-feedback {
+  background: #3b82f6;
+  color: white;
+}
+
+.c-btn-view-feedback:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}

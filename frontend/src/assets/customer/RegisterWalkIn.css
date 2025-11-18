@@ -1,0 +1,199 @@
+/* Tổng thể */
+.quynh-register-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 50px;
+  padding-bottom: 30px; /* ✅ thêm khoảng trống dưới để bóng hiện rõ */
+  overflow-x: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Form chính */
+.quynh-register-form {
+  display: flex;
+  gap: 40px;
+  justify-content: center; 
+  padding: 45px 55px;
+  background-color: #ffffff;
+  border-radius: 10px;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15),
+              0 8px 20px rgba(0, 0, 0, 0.25);
+  font-size: 17px;
+  max-width: 920px;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+}
+
+
+/* Phần mỗi bên */
+.quynh-form-section {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+}
+
+.quynh-form-section h4 {
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 1px solid #000;
+  width: fit-content;
+  margin-bottom: 18px;
+}
+
+/* Mỗi nhóm input */
+.quynh-form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.quynh-form-group label {
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+/* Input */
+.quynh-form-group input[type="text"],
+.quynh-form-group input[type="email"],
+.quynh-form-group input[type="password"],
+.quynh-form-group input[type="date"] {
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 10px 12px;
+  font-size: 16px;
+  outline: none;
+  height: 40px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.quynh-form-group input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.25);
+}
+
+/* Gender */
+.quynh-gender {
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.quynh-gender label {
+  margin: 0 8px;
+  font-weight: normal;
+  font-size: 15px;
+}
+
+/* Đường chia giữa 2 bên */
+.quynh-divider {
+  border-left: 1px solid #ccc;
+  height: 350px;
+}
+
+/* Nút Register */
+.quynh-register-btn {
+  background-color: #d47d00;
+  color: #fff;
+  border: none;
+  padding: 12px 26px;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+  align-self: flex-end;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.quynh-booking-btn {
+  background-color: #2178e9;
+  color: #fff;
+  border: none;
+  padding: 12px 26px;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+  align-self: flex-end;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.quynh-booking-btn:hover {
+  background-color: #0954b6;
+  box-shadow: #0954b6;
+}
+
+.quynh-register-btn:hover {
+  background-color: #b56300;
+  box-shadow: 0 4px 10px rgba(212, 125, 0, 0.4);
+}
+/* Password icon */
+.quynh-password-box {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.quynh-password-box input {
+  width: 100%;
+  padding-right: 40px; /* chừa chỗ cho icon */
+}
+
+.quynh-eye-icon {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 0.2s;
+}
+
+.quynh-eye-icon:hover {
+  opacity: 1;
+}
+
+/* Error & Success messages */
+.quynh-error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.quynh-success-message {
+  color: green;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.quynh-btn-group {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+  justify-content: flex-end;
+}
+/* wrapper để hiển thị counter ở góc phải input */
+.quynh-input-with-counter {
+  position: relative;
+}
+
+/* counter nhỏ hiển thị số lượng chữ số */
+.quynh-counter {
+  position: absolute;
+  right: 12px;
+  top: 70%;
+  transform: translateY(-50%);
+  font-size: 13px;
+  color: #666;
+  background: rgba(255,255,255,0.0); /* nếu cần nền để dễ đọc đổi màu */
+  padding: 2px 6px;
+  pointer-events: none;
+}
+
+/* ensure inputs have space on right */
+.quynh-input-with-counter input {
+  padding-right: 60px;
+}
+
+/* bạn đã có .quynh-password-box/.quynh-eye-icon từ trước */

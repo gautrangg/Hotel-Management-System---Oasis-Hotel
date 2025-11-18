@@ -1,0 +1,196 @@
+/* --- Main Container --- */
+.t-receptionist-room-booking__container {
+    width: 100%;
+    padding: 0;
+}
+
+.t-receptionist-room-detail-card__right .t-orange-btn {
+    padding: 8px 18px;
+}
+
+.t-receptionist-room-list__table .t-orange-btn{
+    padding: 6px 14px;
+}
+
+.t-roomdetail-calendar-wrapper {
+    margin: 0%;
+    width: 100%;
+}
+
+.t-roomdetail-calendar-container {
+    margin: 0;
+}
+
+/* --- TOP SECTION: Detail View Card --- */
+.t-receptionist-room-detail-card {
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    gap: 20px;
+}
+
+/* Left Section - Image & Title */
+.t-receptionist-room-detail-card__left {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: 100%;
+}
+
+.t-receptionist-room-detail-card__image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.t-receptionist-room-detail-card__title {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.t-receptionist-room-detail-card__title h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.t-receptionist-room-detail-card__title p {
+    font-size: 1.1rem;
+    color: #555;
+    font-weight: bold;
+}
+
+/* Right Section - Price & Action */
+.t-receptionist-room-detail-card__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    height: 100%;
+}
+
+.t-receptionist-room-detail-card__price {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #333;
+    text-align: right;
+    line-height: 1.2;
+}
+
+.t-receptionist-room-detail-card__price span {
+    display: block;
+    font-size: 0.9rem;
+    color: #777;
+    font-weight: normal;
+}
+
+/* --- BOTTOM SECTION: Room List Table --- */
+.t-receptionist-room-list {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.t-receptionist-room-list__filters {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.t-receptionist-room-list__filter-select,
+.t-receptionist-room-list__filter-search {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    background-color: #fdfdfd;
+}
+.t-receptionist-room-list__filter-select {
+    min-width: 250px;
+}
+.t-receptionist-room-list__filter-search {
+    width: 250px;
+}
+
+/* Table styles */
+.t-receptionist-room-list__table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.t-receptionist-room-list__table th,
+.t-receptionist-room-list__table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0;
+    vertical-align: middle;
+}
+
+.t-receptionist-room-list__table thead tr {
+    background-color: #D96704;
+    color: white;
+}
+
+.t-receptionist-room-list__table thead th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+.t-receptionist-room-list__table thead th:first-child { border-top-left-radius: 8px; }
+.t-receptionist-room-list__table thead th:last-child { border-top-right-radius: 8px; }
+
+.t-receptionist-room-list__table tbody tr {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.t-receptionist-room-list__table tbody tr:hover {
+    background-color: #fff8f0; /* Light orange on hover */
+}
+
+/* Style for the selected row */
+.t-receptionist-room-list__table tbody tr.selected-row {
+    background-color: #ffeacc;
+    font-weight: 500;
+}
+
+.t-receptionist-room-list__table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Status tag styles */
+.status {
+    padding: 5px 12px;
+    border-radius: 16px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: #fff;
+    text-transform: capitalize;
+    display: inline-block;
+    min-width: 80px;
+    text-align: center;
+}
+
+.status.available {
+    background-color: #2ecc71; /* Green */
+}
+
+.status.occupied {
+    background-color: #e67e22; /* Orange */
+}
+
+.status:not(.available):not(.occupied) {
+    background-color: #029fab;
+}

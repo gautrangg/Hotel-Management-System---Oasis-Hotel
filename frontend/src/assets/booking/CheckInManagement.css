@@ -1,0 +1,90 @@
+
+.checkin-main-content {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.checkin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.checkin-header h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.checkin-search-bar {
+    width: 40%;
+    position: relative;
+}
+
+.checkin-search-bar input {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+    font-size: 14px;
+}
+
+.checkin-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.checkin-table th,
+.checkin-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.checkin-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #6c757d;
+}
+
+.checkin-table tbody tr:hover {
+    background-color: #f1f3f5;
+}
+
+.status-confirmed {
+    color: #007bff;
+    background-color: rgba(0, 123, 255, 0.1);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.checkin-panel .panel-form .read-only-group {
+    margin-bottom: 18px;
+}
+
+.checkin-panel .panel-form .read-only-group label {
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+    font-size: 14px;
+}
+
+.checkin-panel .panel-form .read-only-value {
+    background-color: #f8f9fa;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #495057;
+    border: 1px solid #e9ecef;
+}

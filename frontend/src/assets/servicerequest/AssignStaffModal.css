@@ -1,0 +1,183 @@
+.asm-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 800;
+}
+
+.asm-modal {
+  width: 760px;
+  max-height: 88vh;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: asmFade 0.18s ease;
+}
+
+@keyframes asmFade {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.asm-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.asm-header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.asm-close {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #666;
+}
+
+.asm-body {
+  display: flex;
+  gap: 14px;
+  padding: 16px;
+}
+
+.asm-left {
+  width: 46%;
+  background: #fafafa;
+  border-radius: 6px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.asm-image-wrap img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #e6e6e6;
+}
+
+.asm-left-info {
+  width: 100%;
+  padding: 6px 4px;
+}
+
+.asm-service-title {
+  margin: 6px 0 8px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.asm-requester {
+  margin: 0 0 8px;
+  font-weight: 500;
+}
+
+.asm-right {
+  width: 54%;
+  display: flex;
+  flex-direction: column;
+}
+
+.asm-right-header {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.asm-right-header h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.asm-search {
+  margin-left: auto;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  width: 52%;
+}
+
+.asm-staff-list {
+  margin-top: 12px;
+  overflow-y: auto;
+  max-height: 360px;
+  padding-right: 6px;
+}
+
+.asm-staff-item {
+  display: block;
+  padding: 8px 6px;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+}
+
+.asm-staff-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.asm-staff-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #e6e6e6;
+}
+
+.asm-staff-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.asm-staff-name {
+  font-weight: 600;
+}
+
+.asm-staff-phone {
+  color: #666;
+  font-size: 13px;
+}
+
+.asm-note {
+  margin-top: 10px;
+  color: #666;
+  font-size: 13px;
+}
+
+.asm-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+.asm-assign-btn {
+  background: #f39c12;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}

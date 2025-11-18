@@ -1,0 +1,410 @@
+/* ============================================
+   BOOKING DETAIL PAGE STYLES
+============================================ */
+
+.bd-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+}
+
+/* ============ HEADER ============ */
+.bd-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    
+    margin-top: 50px;
+}
+
+.bd-btn-back {
+    background: #e59b10;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.bd-btn-back:hover {
+    background: #f5c146;
+}
+
+.bd-header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+/* ============ LOADING & ERROR ============ */
+.bd-loading, .bd-error {
+    text-align: center;
+    padding: 40px;
+    background: white;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.bd-error {
+    color: #d32f2f;
+}
+
+/* ============ CONTENT WRAPPER ============ */
+.bd-content-wrapper {
+    padding: 0 80px;
+    display: grid;
+    grid-template-columns: 1fr 600px;
+    gap: 25px;
+}
+
+@media (max-width: 1024px) {
+    .bd-content-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============ LEFT SECTION ============ */
+.bd-left-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ============ ROOM CARD ============ */
+.bd-room-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.bd-room-image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.bd-room-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bd-room-info {
+    padding: 20px;
+}
+
+.bd-room-info h2 {
+    margin: 0 0 10px 0;
+    font-size: 28px;
+    color: #333;
+}
+
+.bd-room-number {
+    color: #666;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.bd-room-price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f76a2e;
+    margin: 10px 0;
+}
+
+.bd-room-description {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.bd-room-description h3 {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.bd-room-description p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* ============ SERVICES SECTION ============ */
+.bd-services-section {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.bd-services-section h2 {
+    margin: 0 0 20px 0;
+    font-size: 22px;
+    color: #333;
+}
+
+.bd-services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.bd-service-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    transition: box-shadow 0.3s;
+    position: relative;
+}
+
+.bd-service-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.bd-service-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.bd-service-info {
+    flex: 1;
+}
+
+.bd-service-info h3 {
+    margin: 0 0 8px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.bd-service-details {
+    display: flex;
+    gap: 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+.bd-service-note {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid #e0e0e0;
+    font-size: 13px;
+}
+
+.bd-note-label {
+    font-weight: 600;
+    color: #666;
+    margin-right: 5px;
+}
+
+.bd-note-text {
+    color: #555;
+    font-style: italic;
+}
+
+.bd-service-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.bd-service-status {
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.bd-status-completed {
+    background: #d4edda;
+    color: #155724;
+}
+
+.bd-status-assigned{
+    background: #ccc4ff;
+    color: #000988;
+}
+
+.bd-status-pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.bd-status-cancelled {
+    background: #f8d7da;
+    color: #721c24;
+}
+.bd-status-in {
+    background: #efd18d;
+    color: #947c51;
+}
+
+.bd-service-total {
+    font-size: 16px;
+    font-weight: bold;
+    color: #f8a323;
+    margin: 0;
+}
+
+.bd-no-services {
+    text-align: center;
+    color: #999;
+    padding: 40px 0;
+}
+
+/* ============ DELETE BUTTON ============ */
+.bd-service-delete-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: none;
+    background: #ff4444;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.bd-service-delete-btn:hover:not(:disabled) {
+    background: #cc0000;
+    transform: scale(1.1);
+    box-shadow: 0 2px 8px rgba(255, 68, 68, 0.4);
+}
+
+.bd-service-delete-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.bd-service-delete-btn:active:not(:disabled) {
+    transform: scale(0.95);
+}
+
+/* ============ RIGHT SECTION - INVOICE PLACEHOLDER ============ */
+.bd-right-section {
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+}
+
+.bd-invoice-placeholder {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.bd-invoice-placeholder h2 {
+    margin: 0 0 15px 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.bd-invoice-notice {
+    background: #e3f2fd;
+    border-left: 4px solid #f3b421;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 4px;
+}
+
+.bd-invoice-notice p {
+    margin: 5px 0;
+    color: #ffb20b;
+}
+
+.bd-invoice-notice code {
+    background: #bbdefb;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 13px;
+}
+
+.bd-debug-data {
+    margin-top: 20px;
+}
+
+.bd-debug-data summary {
+    cursor: pointer;
+    padding: 10px;
+    background: #f5f5f5;
+    border-radius: 4px;
+}
+
+.bd-debug-data summary:hover {
+    background: #e0e0e0;
+}
+
+.bd-debug-data pre {
+    background: #263238;
+    color: #aed581;
+    padding: 15px;
+    border-radius: 4px;
+    overflow-x: auto;
+    font-size: 12px;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+/* ============================================
+   BẠN SẼ THÊM CSS CHO INVOICE Ở ĐÂY
+   Ví dụ các class bạn có thể dùng:
+   .bd-invoice-header
+   .bd-invoice-customer
+   .bd-invoice-table
+   .bd-invoice-row
+   .bd-invoice-total
+   ...
+============================================ */
+.bd-invoice-summary {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin-top: 10px;
+  line-height: 1.7;
+  font-size: 15px;
+  border: 1px solid #ddd;
+  transition: all 0.2s ease;
+}
+
+.bd-invoice-summary:hover {
+  background: #f5f7f9;
+}
+
+.bd-invoice-summary hr {
+  border: none;
+  border-top: 1px dashed #ccc;
+  margin: 10px 0;
+}
+
+.bd-invoice-click-note {
+  font-style: italic;
+  color: #555;
+  margin-top: 8px;
+}

@@ -1,0 +1,353 @@
+.t-servicedetail-page {
+    font-family: Arial, sans-serif;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    margin-top: 80px;
+    color: #333;
+}
+
+.t-servicedetail-header {
+    font-size: 40px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.t-servicedetail-breadcrumbs {
+    font-size: 12px;
+    color: #888;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.t-servicedetail-breadcrumbs span {
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.t-servicedetail-breadcrumbs span:hover {
+    color: #d77006;
+}
+
+.t-servicedetail-main-content {
+    display: flex;
+    gap: 20px;
+}
+
+.t-servicedetail-left-column {
+    flex: 1.5;
+}
+
+.t-servicedetail-right-column {
+    flex: 1;
+}
+
+.t-servicedetail-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.t-servicedetail-tag {
+    display: inline-block;
+    border: 1px solid #ddd;
+    padding: 6px 16px;
+    border-radius: 16px;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.t-servicedetail-description {
+    font-size: 12px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.t-servicedetail-time {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.t-servicedetail-time-value {
+    display: inline-block;
+    border: 1px solid #ddd;
+    padding: 6px 16px;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-left: 10px;
+    color: #ee5f00;
+}
+
+.t-servicedetail-request-box {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.t-servicedetail-price-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 20px;
+}
+
+.t-servicedetail-price-label {
+    font-size: 12px;
+    color: #888;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+}
+
+.t-servicedetail-price-value {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.t-servicedetail-form-header {
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 14px;
+}
+
+.t-servicedetail-form-subtitle {
+    font-size: 12px;
+    color: #888;
+    margin: 0;
+}
+
+.t-servicedetail-form-title {
+    font-size: 20px;
+    font-weight: normal;
+    margin: 5px 0 0 0;
+}
+
+.t-servicedetail-form-group {
+    position: relative;
+    margin-bottom: 14px;
+}
+
+.t-servicedetail-form-group label {
+    position: absolute;
+    top: 5px;
+    left: 17px;
+    font-size: 12px;
+    color: #999;
+    pointer-events: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.t-servicedetail-input {
+    width: 100%;
+    padding: 28px 6px 6px 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #fff;
+    transition: border-color 0.2s ease-in-out;
+    box-sizing: border-box;
+}
+
+.t-servicedetail-input:focus {
+    outline: none;
+    border-color: #E67E22;
+}
+
+/* Floating Label Animation */
+.t-servicedetail-input:focus~label,
+.t-servicedetail-input:not(:placeholder-shown)~label,
+select.t-servicedetail-input~label {
+    top: 5px;
+    font-size: 12px;
+    color: #E67E22;
+}
+
+/* Specific styling for the textarea */
+textarea.t-servicedetail-input {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Quantity Control Styling */
+.t-servicedetail-quantity-control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: text;
+}
+
+.t-servicedetail-quantity-control span {
+    font-size: 14px;
+    color: #333;
+}
+
+.t-servicedetail-quantity-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.t-servicedetail-quantity-buttons button {
+    background-color: transparent;
+    border: 1px solid #e0e0e0;
+    color: #555;
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    font-size: 20px;
+    transition: all 0.2s;
+}
+
+.t-servicedetail-quantity-buttons button:first-child {
+    border-radius: 4px 0 0 4px;
+    border-right: none;
+}
+
+.t-servicedetail-quantity-buttons button:last-child {
+    border-radius: 0 4px 4px 0;
+}
+
+.t-servicedetail-quantity-buttons button:hover {
+    background-color: #f5f5f5;
+    color: #E67E22;
+}
+
+.t-servicedetail-submit-btn {
+    width: 100%;
+    padding: 16px;
+    background-color: #E67E22;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.t-servicedetail-submit-btn:hover {
+    background-color: #D35400;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* === Suggestion Section Styling === */
+.t-servicedetail-suggest-section {
+    max-width: 1400px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.t-servicedetail-suggest-header {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #1f2937;
+}
+
+.t-servicedetail-suggest-list-wrapper {
+    overflow-x: hidden;
+    position: relative;
+    padding: 10px;
+}
+
+.t-servicedetail-suggest-list {
+    display: flex;
+    gap: 24px;
+    scroll-behavior: smooth;
+}
+
+.t-servicedetail-suggest-card {
+    flex: 0 0 32%;
+    min-width: 300px;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background-color: #ffffff;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.t-servicedetail-suggest-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.t-servicedetail-suggest-card-image {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
+.t-servicedetail-suggest-card-body {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.t-servicedetail-suggest-card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111827;
+    margin: 0 0 4px 0;
+}
+
+.t-servicedetail-suggest-card-price {
+    font-size: 16px;
+    font-weight: 110%;
+    color: #F97316;
+    margin: 0;
+}
+
+.t-servicedetail-suggest-card-button {
+    padding: 6px 18px;
+    border: 1px solid #F97316;
+    color: #F97316;
+    background-color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.t-servicedetail-suggest-card-button:hover {
+    background-color: #F97316;
+    color: #fff;
+}
+
+.t-servicedetail-suggest-nav {
+    margin-top: 24px;
+    display: flex;
+    gap: 12px;
+}
+
+.t-servicedetail-suggest-nav-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #F97316;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.t-servicedetail-suggest-nav-btn:hover {
+    background-color: #EA580C;
+}
+
+.t-servicedetail-suggest-nav-btn:active {
+    transform: scale(0.95);
+}

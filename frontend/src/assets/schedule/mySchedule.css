@@ -1,0 +1,290 @@
+/* Khung chính */
+.quynh-schedule-container {
+    padding: 90px 150px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: sans-serif;
+}
+
+/* Tabs */
+.quynh-schedule-tabs {
+    display: flex;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 20px;
+}
+
+.quynh-schedule-tabs .quynh-tab-btn {
+    background: none;
+    border: none;
+    padding: 12px 25px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 16px;
+    color: #666;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.quynh-schedule-tabs .quynh-tab-btn:hover {
+    color: orange;
+}
+
+.quynh-schedule-tabs .quynh-tab-btn.quynh-active {
+    color: orange;
+}
+
+.quynh-schedule-tabs .quynh-tab-btn.quynh-active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: orange;
+}
+
+/* Thanh công cụ phía trên bảng */
+.quynh-schedule-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+/* Nhóm bên trái: tháng và tuần */
+.quynh-toolbar-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.quynh-toolbar-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Dropdown chọn tuần */
+.quynh-week-select {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    cursor: pointer;
+    background: white;
+    min-width: 280px;
+}
+
+.quynh-week-select:focus {
+    outline: none;
+    border-color: orange;
+}
+
+/* Nhóm bên phải: nút thao tác */
+.quynh-toolbar-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quynh-orange-btn {
+    background: orange;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.quynh-orange-btn:hover {
+    background: #ef8a24;
+}
+
+.quynh-request-btn,
+.quynh-export-btn {
+    background: orange;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+    white-space: nowrap;
+}
+
+.quynh-request-btn:hover {
+    background: #ef8a24;
+}
+
+/* Bảng lịch */
+.quynh-schedule-table table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 15px;
+}
+
+.quynh-schedule-table th,
+.quynh-schedule-table td {
+    border: 1px solid #666;
+    padding: 12px;
+}
+
+.quynh-schedule-table th {
+    background: orange;
+    color: #fff;
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+.quynh-schedule-table .quynh-day-header {
+    min-width: 100px;
+}
+
+.quynh-shift-col {
+    background: #f7f3e9;
+    font-weight: bold;
+    color: #333;
+    min-width: 150px;
+}
+
+.quynh-shift-info {
+    text-align: left;
+    padding-left: 15px;
+}
+
+.quynh-shift-info strong {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.quynh-shift-time {
+    font-size: 13px;
+    color: #666;
+    font-weight: normal;
+}
+
+.quynh-day-cell {
+    background: #fff;
+    height: 60px;
+    transition: background-color 0.2s;
+}
+
+
+/* Overlay form */
+.quynh-schedule-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.quynh-schedule-form {
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 8px;
+    width: 350px;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.quynh-close-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #666;
+}
+
+.quynh-close-btn:hover {
+    color: orange;
+}
+
+.quynh-form-container label {
+    display: block;
+    margin-top: 12px;
+    font-weight: 500;
+    color: #333;
+}
+
+.quynh-form-container input,
+.quynh-form-container select,
+.quynh-form-container textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.quynh-form-container button {
+    margin-top: 18px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: orange;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.quynh-form-container button:hover {
+    background: darkorange;
+}
+
+
+.quynh-day-cell.quynh-status-scheduled {
+    background-color: #e0e7ff;
+    border-left: 4px solid #6366f1;
+    color: #312e81;
+}
+
+.quynh-day-cell.quynh-status-on-time {
+    background-color: #dcfce7;
+    border-left: 4px solid #22c55e;
+    color: #166534;
+}
+
+.quynh-day-cell.quynh-status-late {
+    background-color: #fef9c3;
+    border-left: 4px solid #f59e0b;
+    color: #a16207;
+}
+
+.quynh-day-cell.quynh-status-absent {
+    background-color: #f49b9b;
+    border-left: 4px solid #ef4444;
+    color: #991b1b;
+}
+
+.quynh-day-cell.quynh-status-cancelled {
+    background-color: #e5e7eb;
+    /* Xám */
+    border-left: 4px solid #6b7280;
+    color: #4b5563;
+    background-image: linear-gradient(to top right, transparent 49.5%, #9ca3af 49.5%, #9ca3af 50.5%, transparent 50.5%);
+}
+
+.quynh-status-text {
+    font-weight: bold;
+}

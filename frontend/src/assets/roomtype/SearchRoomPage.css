@@ -1,0 +1,447 @@
+/* ===== RESET & GLOBAL ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.c-c-search-page-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    background: #f5f5f5;
+    padding-top: 30px; /* Space for fixed header */
+}
+.c-search-page-container {
+    padding-top: 6rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 3.5rem;
+    min-height: calc(100vh - 80px);
+}
+
+/* ===== HEADER - SEARCH BAR ===== */
+.c-search-header {
+    padding: 40px 20px;
+    box-shadow: none;
+    position: sticky;
+    top: 10px;
+    z-index: 100;
+    padding-bottom: 0;
+}
+
+.c-search-bar {
+    max-width: 1200px;
+    margin: 0 ;
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    align-items: flex-end;
+    gap: 20px;
+    background-color: #ffffff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.c-date-picker {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.c-date-picker label {
+    font-size: 12px;
+    color: #999;
+    font-weight: 400;
+    text-transform: capitalize;
+    letter-spacing: 0.3px;
+}
+
+.c-date-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: none;
+    border-bottom: 2px solid #e0e0e0;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    background-color: transparent;
+    transition: border-color 0.2s;
+}
+
+.c-date-input:focus {
+    outline: none;
+    border-bottom-color: #ff8c42;
+}
+
+.c-date-input::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.c-search-button {
+    border: none;
+    padding: 16px 60px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    height: fit-content;
+    border: 1px solid #d97706;
+}
+
+.c-search-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ===== MAIN CONTENT LAYOUT ===== */
+.c-search-main-content {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 30px;
+    max-width: 1600px;
+    margin: 30px auto;
+
+}
+
+/* ===== FILTER SIDEBAR ===== */
+.c-filter-sidebar {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    height: fit-content;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 180px;
+    min-width: 280px;
+}
+
+.c-filter-sidebar h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.c-filter-option {
+    display: flex;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 0;
+    gap: 15px;
+}
+
+.c-filter-option:last-child {
+    border-bottom: none;
+}
+
+.c-filter-option input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #ff6b35;
+}
+
+.c-filter-option label {
+    font-size: 15px;
+    color: #555;
+    cursor: pointer;
+    flex: 1;
+}
+
+/* ===== RESULTS CONTAINER ===== */
+.c-search-results-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.c-search-results-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.c-search-results-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.c-search-results-container::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+.c-search-results-container::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+
+.c-error-message {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 15px 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 14px;
+}
+
+@media (max-width: 1024px) {
+    .c-search-main-content {
+        grid-template-columns: 1fr;
+    }
+
+    .c-filter-sidebar {
+        position: static;
+    }
+
+    .c-book-button {
+        width: auto;
+        min-width: 140px;
+        padding: 12px 30px;
+    }
+
+    .c-search-results-container {
+        overflow-x: visible;
+    }
+}
+
+@media (max-width: 768px) {
+    .c-search-header {
+        padding: 20px 15px;
+    }
+
+    .c-search-bar {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 20px;
+    }
+
+    .c-date-picker {
+        width: 100%;
+    }
+
+    .c-search-button {
+        width: 100%;
+        padding: 14px;
+    }
+
+    .c-search-main-content {
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+
+    .c-filter-sidebar {
+        padding: 20px;
+    }
+}
+
+
+/* --- General Layout & Page Container --- */
+.c-search-page-container {
+    width: 90%;
+    margin: 2rem auto; 
+    
+}
+
+.c-search-main-content {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    border-radius: 1vw;
+    border: 1px solid #f6f6f6;
+}
+
+/* --- Search Results (Cột Phải) --- */
+.c-search-results-container {
+    flex: 1; /* Chiếm hết không gian còn lại */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Khoảng cách giữa các room card */
+}
+
+/* --- Main Card Container --- */
+.c-room-card {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border: 1px solid #e0e0e0;
+    width: 100%;
+}
+
+.c-room-card:hover {
+    transform: translateY(1px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* --- Left Column (Main Image & Available Rooms) --- */
+.c-room-card-left-column {
+    flex: 0 0 45%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 2%;
+    padding-top: 2%;
+}
+
+.c-room-image-container {
+    width: 100%;
+    padding-top: 66.66%;
+    position: relative;
+}
+
+.c-room-image-container .image-loading-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+}
+
+
+.c-room-image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1vw;
+    object-fit: cover;
+}
+
+.c-available-rooms-section {
+    padding: 16px;
+    border-top: 1px solid #eee;
+    padding-left: 0;
+}
+
+.c-available-rooms-section h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.c-room-numbers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.c-room-number-tag {
+    background-color: #f2f2f2;
+    border: none;
+    border-radius: 0.5vw;
+    padding: 0.5vw 1.5vw;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    cursor: default;
+    border: 1px dashed #333;
+}
+
+/* --- Right Column (Details) --- */
+.c-room-card-right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px;
+}
+
+.c-room-details-top h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 12px;
+}
+
+.c-room-preview-images {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.preview-img-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.preview-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.c-room-description {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    /* Limit the number of lines shown */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Show 3 lines */
+    -webkit-box-orient: vertical;
+}
+
+
+.details-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 20px;
+}
+
+.price-capacity-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.c-room-capacity {
+    display: flex;
+    gap: 16px;
+    justify-content: end;
+    align-items: center;
+}
+
+.c-capacity-item {
+    display: flex;
+    gap: 6px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.c-capacity-item i {
+    font-size: 20px;
+    color: #df6500;
+}
+
+.c-room-price {
+    font-size: 26px;
+    font-weight: 100%;
+    color: #222;
+}
+
+.c-book-button {
+    border: none;
+    padding: 14px 32px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid #d97706;
+}
